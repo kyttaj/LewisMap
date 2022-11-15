@@ -1,2 +1,2 @@
-# univeritymap-capstoneproject
+# universitymap-capstoneproject
 Lewis University Map
