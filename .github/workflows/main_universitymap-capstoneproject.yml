@@ -53,5 +53,5 @@ jobs:
         with:
           app-name: 'universitymap-capstoneproject'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A310E4D3EC234A81A124F3CA5E294B15 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C806C937230247FCAC29AED3C0B27F1C }}
           package: .
