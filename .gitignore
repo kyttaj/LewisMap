@@ -1,0 +1,10 @@
+.DS_Store
+.github
+.git
+README.md
+LICENSE
+node_modules
+package-lock.json
+package.json
+process.json
+web.config
