@@ -1,12 +1,659 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en-US" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-	<link rel="stylesheet" href="index.css">
-	<title>Lewis University Map</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,width=device-width" />
+    <title>Lewis University | Romeoville Campus | Campus Map</title>
+    <link rel="stylesheet" href="https://lewisu.edu/css/style.css?35" />
+    <link rel="stylesheet" href="https://lewisu.edu/css/mobile.css?35" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+
+    <!-- Map css -->
+    <link rel="stylesheet" href="mapCSS/map.css" crossorigin="" />
+
+
+    <!-- Leaflet css -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+          integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+
+    <!-- Leaflet Javaascript -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+
+
+
+
+
+    <script type="text/javascript" src="https://lewisu.edu/js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/jquery.hoverIntent.min.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/jquery.menu.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/jquery.carouFredSel.packed.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/svg-injector.min.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/truncate-text.js"></script>
+    <script type="text/javascript" src="https://lewisu.edu/js/custom.js"></script>
+
 </head>
+
 <body>
-	<h1>Lewis Univeristy Interactive Map</h1>
-	<p>This web app is an interactive map for Lewis University, feel free to  click around</p>
-	<p>version 1</p>
-</body>
-</html>
+
+
+<div class="skin-area">
+
+    <!-- quick links -->
+    <div id="QuickLinksWp" class="QuickLinksWp">
+        <div class="container">
+            <ul class="QuickLkList QuickLkFirstList">
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/admissions/application.htm">Apply Now</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/artsandideas/index-ai.htm">Arts and Ideas</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/asap/index.htm">Aviation Safety Action Program (ASAP)</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/bb/index.htm" target="_blank">Blackboard</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/bookstore/index.htm" target="_blank">Bookstore</a></li>
+
+            </ul>
+            <ul class="QuickLkList">
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/calendar/index.htm">Calendars</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/portals/contactus.htm">Contact Us</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/portals/email.htm">Email</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/emergencyplanning/index.htm">Emergency Planning</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/welcome/offices/hr/">Employment / HR</a></li>
+
+
+            </ul>
+            <ul class="QuickLkList">
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/academics/library/index.htm">Library</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/mylewis/index.htm" target="_blank">MyLewis</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/admissions/ordertranscripts.htm">Order Official Transcript</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/academics/theatre/plt.htm">Philip Lynch Theatre</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/academics/onlineRecords.htm">Register Today</a></li>
+
+
+            </ul>
+            <ul class="QuickLkList QuickLkLastList">
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/admissions/reactivatestudent.htm">Re-Enroll</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/act/index.htm">Report a Person of Concern (ACT)</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/academics/onlineRecords.htm" target="_blank">Tuition Payment</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/welcome/vtour/index.htm" >Virtual Tour</a></li>
+                <li class="QuickLkItem"><a class="QuickLkLink" href="https://lewisu.edu/wlra/index.htm">WLRA</a></li>
+            </ul>
+            <a id="toggleLink" class="closeBtn" href="javascript:void(0)">close X</a>
+        </div>
+    </div>
+    <!-- topnav -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="float-right">
+                <a href="https://lewisu.edu/mylewis/index.htm" class="logo-holder" target="_blank">
+                    <svg class="TopNavLogo" data-src="https://lewisu.edu/images/myLewis-Logo.svg"></svg>
+                </a>
+                <a href="javascript:void(0)" class="btn-toggle"></a>
+            </div>
+            <div class="float-left">
+                <ul class="topnav">
+                    <li class="topnav-item"><a class="nav-link quick-link" href="javascript:void(0)">QuickLinks</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/portals/currentportal.htm">Current Students</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/portals/facultystaffportal.htm">Fac/Staff</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/parents/index.htm">Parents</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/alumni/index.htm" target="_blank">Alumni</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://www.alumni.lewisu.edu/Give" target="_blank">Support LU</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/admissions/visits/index.htm">Visit Us</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/portals/request-info.htm">Request Info</a></li>
+                    <li class="topnav-item"><a class="nav-link" href="https://lewisu.edu/apply/index.htm">Apply Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="https://lewisu.edu/index.htm"><img src="https://lewisu.edu/images/logo90.png" class="LogoImg"></a>
+            </div>
+            <a class="navToggle no-desktop" href="javascript:void(0)">
+                <svg class="navToggleOpen" data-src="https://lewisu.edu/images/menu.svg"></svg>
+                <svg class="navToggleClose" data-src="https://lewisu.edu/images/close.svg"></svg>
+            </a>
+            <div class="mob-OpenSearch">
+                <form action="https://lewisu.edu/portals/searchresults.htm" id="cse-search-box" name="cse-search-box">
+
+
+                    <input type="hidden" name="cx" value="004847330294043509984:ntsofoaewya" />
+                    <input type="hidden" name="cof" value="FORID:11" />
+                    <input type="hidden" name="ie" value="UTF-8" />
+
+                    <input id="MobsearchInput" name="q" class="mobsearch" title="" placeholder="Search" type="text" value="">
+
+                </form>
+
+            </div>
+            <div class="mobile-search clear display-none">
+                <a href="#"><i class="fa fa-search MobSearchImg" aria-hidden="true"></i></a>
+            </div>
+            <div class="menu clear">
+                <div id="header-nav-list-mobile" class="nav-list-mobile">
+                    <!-- Degree Programs -->
+                    <div class="nav-list-section-one">
+                        <div class="nav-list-dropdown">
+                            <a href="#"> <span>About Us</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Administration</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/welcome/president.htm">President</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/provost/index.htm">Office of the Provost</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/leadership.htm">Leadership</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/bot/index.htm">Board of Trustees</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/facstaffdirectory/FacStaffDir2.htm">Faculty & Staff Directory</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/admin_offices.htm">Administrative Offices</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Overview</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/history.htm">History</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/facts.htm">Lewis At A Glance</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/ourcampus.htm">Our Campus</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/hr/">Employment</a></li>
+                            </ul>
+                        </ul>
+                        <div class="nav-list-dropdown">
+                            <a href="#"> <span>Academics</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Degrees & Programs</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/ugrad.htm">Undergraduate Programs</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/gened/index.htm">General Education</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/adultundergrad.htm">Adult Undergraduate Programs</a></li>
+
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/grad.htm">Graduate Programs</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/onlineprograms.htm">Online Programs</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/Nondegree.htm">Non-Degree Programs</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/4plus1programs.htm">4+1 Programs</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/accreditation/index.htm">Accreditation</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Colleges & School</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/coast/index.htm">Aviation, Science and Technology</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/cob/index.htm">Business</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/coess/index.htm">Education and Social Sciences</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/cohfac/index.htm">Humanities, Fine Arts and Communications</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/nursing/index.htm">Nursing and Health Sciences</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/sgpce/index.htm">School of Graduate, Professional & Continuing Education</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Helpful Resources</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/catalog.htm">Catalogs</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/schedule.htm">Schedules</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/library/index.htm">Library</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/admissions/finaid/partnership.htm">Partnerships</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/acasupport.htm">Academic Resources</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/academiccalendar.htm">Academic Calendar</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/research-scholarship/index.htm">Research & Scholarship</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/studyabroad/index.htm">Study Abroad</a></li>
+                            </ul>
+                        </ul>
+                        <div class="nav-list-dropdown">
+                            <a class="contact-us" href="#"> <span>Admission & Aid</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Admission</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/admissions/index.htm">How to Get Started</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/undergraduate/index.htm">Freshman</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/transfer/index.htm">Transfer</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/adultundergraduate/adultundergrad.htm">Adult Undergraduate</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/graduate/index.htm">Graduate</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/international/index.htm">International</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/veterans/index.htm">Veterans & Military</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Financial Aid</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/business/bursar/tuitionrates.htm">Tuition and Costs</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/admissions/finaid/index.htm">Financial Aid</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Visit Us</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/admissions/visits/index.htm">Campus Visits</a></li>
+                            </ul>
+                        </ul>
+                        <div class="nav-list-dropdown">
+                            <a class="contact-us" href="#"> <span>Athletics</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/athletics/index.htm" target="_blank">NCAA Division II Lewis Flyers</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/index.htm">Recreation & Fitness</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/intramurals.htm">Intramurals</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/clubsports/index.htm">Club Sports</a></li>
+                            </ul>
+                        </ul>
+                        <div class="nav-list-dropdown">
+                            <a class="contact-us" href="#"> <span>Student Life</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Get Involved</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/activities.htm">Life at Lewis</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/StudentActivities/index.htm">Student Activities</a></li>
+
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentactivities/senate/index.htm">Student Senate</a></li>
+
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/ministry/index.htm">University Ministry</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/index.htm">Recreation & Fitness</a></li>
+                                <li class="no-link-title"><a>Health & Safety</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/security/index.htm">University Police</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/emergencyplanning/index.htm">Emergency Planning</a></li>
+                            </ul>
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="no-link-title"><a>Services</a></li>
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/index.htm">Student Services</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/housing/index.htm">Housing</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/dining/index.htm">Dining</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/resources/careerservices/index.htm">Career Services</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/multicultural/index.htm">Multicultural Student Services</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/iss/index.htm">International Student Services</a></li>
+                            </ul>
+                        </ul>
+                        <div class="nav-list-dropdown">
+                            <a href="#"> <span>Locations</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <ul class="mSub m1Sub mLevel1">
+                                <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/campuses/romeoville/index.htm">Romeoville (Main Campus)</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/campuses/albuquerque/index.htm">Albuquerque</a></li>
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/campuses/oakbrook/index.htm">Oak Brook</a></li>
+
+                                <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/onlineprograms.htm">Online</a></li>
+                                <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/luce/index.htm">Rome</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div id="Quicklinks-nav-list-mobile" class="nav-list-mobile nav-list-section-two">
+                        <div class="nav-list-dropdown">
+                            <a href="#"> <span>Quicklinks</span> <i class="fa fa-plus"></i> </a>
+                        </div>
+                        <ul class="nav-list-dropdown-items">
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/admissions/application.htm"> <span>Apply Now</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/artsandideas/index-ai.htm"> <span>Arts and Ideas</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/asap/index.htm"> <span>Aviation Safety Action Program (ASAP)</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/bb/index.htm" target="_blank"> <span>Blackboard</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/bookstore/index.htm" target="_blank"> <span>Bookstore</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/calendar/index.htm"> <span>Calendars</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/portals/contactus.htm"> <span>Contact Us</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/portals/email.htm"> <span>Email</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/emergencyplanning/index.htm"> <span>Emergency Planning</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/welcome/offices/hr/"> <span>Employment / HR</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/academics/library/index.htm"> <span>Library</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/mylewis/index.htm" target="_blank"> <span>MyLewis</span> </a>
+                            </li>
+
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/admissions/ordertranscripts.htm"> <span>Order Official Transcript</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/plt/index.htm"> <span>Philip Lynch Theatre</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/academics/onlineRecords.htm"> <span>Register Today</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/admissions/reactivatestudent.htm"> <span>Re-Enroll</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/act/index.htm"> <span>Report a Person of Concern (ACT)</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/academics/onlineRecords.htm" target="_blank"> <span>Tuition Payment</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/welcome/vtour/index.htm"> <span>Virtual Tour</span> </a>
+                            </li>
+                            <li class="nav-list-link">
+                                <a href="https://lewisu.edu/wlra/index.htm"> <span>WLRA</span> </a>
+                            </li>
+                        </ul>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/portals/currentportal.htm"><span>Current Students</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/portals/facultystaffportal.htm"> <span>Fac/Staff</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/parents/index.htm"> <span>Parents</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/alumni/index.htm" target="_blank"> <span>Alumni</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://www.alumni.lewisu.edu/Give" target="_blank"> <span>Support LU</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/admissions/visits/index.htm"> <span>Visit Us</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/portals/request-info.htm"> <span>Request Info</span></a>
+                        </div>
+                        <div class="nav-list-link">
+                            <a href="https://lewisu.edu/admissions/application.htm"> <span>Apply Now</span></a>
+                        </div>
+
+
+                    </div>
+                    <div class="nav-list-section-three mobile-logos">
+                        <div>
+                            <img src="https://lewisu.edu/images/Lasallian-education.png" />
+                        </div>
+                        <div>
+                            <a href="https://lewisu.edu/mylewis/index.htm" target="_blank">
+                                <svg class="MylewsImg" data-src="https://lewisu.edu/images/myLewis-Logo.svg"></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <ul id="nav" class="main-nav">
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>About Us</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Administration</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/welcome/president.htm">President</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/provost/index.htm">Office of the Provost</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/leadership.htm">Leadership</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/welcome/bot/index.htm">Board of Trustees</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/facstaffdirectory/FacStaffDir2.htm">Faculty & Staff Directory</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/admin_offices.htm">Administrative Offices</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mCol mColLast">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Overview</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/history.htm">History</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/facts.htm">Lewis At A Glance</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/ourcampus.htm">Our Campus</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/hr/">Employment</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>Academics</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Degrees & Programs</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/ugrad.htm">Undergraduate Programs</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/gened/index.htm">General Education</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/adultundergrad.htm">Adult Undergraduate Programs</a></li>
+
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/grad.htm">Graduate Programs</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/onlineprograms.htm">Online Programs</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/Nondegree.htm">Non-Degree Programs</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/4plus1programs.htm">4+1 Programs</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/accreditation/index.htm">Accreditation</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1"> <span class="mLink m1Link">Colleges & School</span>
+                                    <ul class="mSub m2Sub mLevel2">
+
+                                        <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/coast/index.htm">Aviation, Science and Technology</a></li>
+                                        <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/cob/index.htm">Business</a></li>
+                                        <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/coess/index.htm">Education and Social Sciences</a></li>
+                                        <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/cohfac/index.htm">Humanities, Fine Arts and Communications</a></li>
+                                        <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/academics/nursing/index.htm">Nursing and Health Sciences</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/sgpce/index.htm">School of Graduate, Professional & Continuing Education</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="mCol mColLast">
+                                <ul class="mSub m1Sub mLevel1"> <span class="mLink m1Link">Helpful Resources</span>
+                                    <ul class="mSub m2Sub mLevel2">
+                                        <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/catalog.htm">Catalogs</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/schedule.htm">Schedules</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/library/index.htm">Library</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/admissions/finaid/partnership.htm">Partnerships</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/acasupport.htm">Academic Resources</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/academiccalendar.htm">Academic Calendar</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/research-scholarship/index.htm">Research & Scholarship</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/academics/studyabroad/index.htm">Study Abroad</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>Admission & Aid</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Admission</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/admissions/index.htm">How to Get Started</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/undergraduate/index.htm">Freshman</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/transfer/index.htm">Transfer</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/adultundergraduate/adultundergrad.htm">Adult Undergraduate</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/graduate/index.htm">Graduate</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/admissions/international/index.htm">International</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/veterans/index.htm">Veterans & Military</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1"> <span class="mLink m1Link">Financial Aid</span>
+                                    <ul class="mSub m2Sub mLevel2">
+                                        <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/welcome/offices/business/bursar/tuitionrates.htm">Tuition and Costs</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/admissions/finaid/index.htm">Financial Aid</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="mCol mColLast">
+                                <ul class="mSub m1Sub mLevel1"> <span class="mLink m1Link">Visit Us</span>
+                                    <ul class="mSub m2Sub mLevel2">
+                                        <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/admissions/visits/index.htm">Campus Visits</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>Athletics</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First">
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/athletics/index.htm" target="_blank">NCAA Division II Lewis Flyers</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/index.htm">Recreation & Fitness</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/intramurals.htm">Intramurals</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/clubsports/index.htm">Club Sports</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>Student Life</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Get Involved</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/activities.htm">Life at Lewis</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/StudentActivities/index.htm">Student Activities</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentactivities//senate/index.htm">Student Senate</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/ministry/index.htm">University Ministry</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/fitnesscenter/index.htm">Recreation & Fitness</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1"> <span class="mLink m1Link">Health & Safety</span>
+                                    <ul class="mSub m2Sub mLevel2">
+                                        <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/health/index.htm">Health & Counseling Center</a></li>
+                                        <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/security/index.htm">University Police</a></li>
+                                        <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/emergencyplanning/index.htm">Emergency Planning</a></li>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="mCol mColLast">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"> <span class="mLink m1Link">Services</span>
+                                        <ul class="mSub m2Sub mLevel2">
+                                            <li class="m2 m2First"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/index.htm">Student Services</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/housing/index.htm">Housing</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/dining/index.htm" target="_blank">Dining</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/resources/careerservices/index.htm">Career Services</a></li>
+                                            <li class="m2"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/multicultural/index.htm">Multicultural Student Services</a></li>
+                                            <li class="m2 m2Last"><a class="mLink m2Link" href="https://lewisu.edu/studentservices/iss/index.htm">International Student Services</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-item m0 mHasChild m0First">
+                        <a class="menu-link mLink m0Link" href="#"> <span>Locations</span> </a>
+                        <div class="mDropDown">
+                            <div class="mCol mColFirst">
+                                <ul class="mSub m1Sub mLevel1">
+                                    <li class="m1 m1First"><a class="mLink m2Link" href="https://lewisu.edu/campuses/romeoville/index.htm">Romeoville (Main Campus)</a></li>
+                                    <li class="m1"><a class="mLink m2Link" href="https://lewisu.edu/campuses/albuquerque/index.htm">Albuquerque</a></li>
+                                    <li class="m1"><a class="mLink m2Link" href="https://lewisu.edu/campuses/oakbrook/index.htm">Oak Brook</a></li>
+
+                                    <li class="m1"><a class="mLink m2Link" href="https://lewisu.edu/academics/programs/onlineprograms.htm">Online</a></li>
+                                    <li class="m1 m1Last"><a class="mLink m2Link" href="https://lewisu.edu/luce/index.htm">Rome</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-content clear">
+                <div class="Open-search">
+                    <form action="https://lewisu.edu/portals/searchresults.htm" id="cse-search-box" name="cse-search-box">
+
+                        <input type="hidden" name="cx" value="004847330294043509984:ntsofoaewya" />
+                        <input type="hidden" name="cof" value="FORID:11" />
+                        <input type="hidden" name="ie" value="UTF-8" />
+
+                        <input id="searchInput" name="q" class="search" title="" placeholder="Search" type="text" value="">
+
+                    </form>
+                </div>
+                <a href="#"><i class="fa fa-search SearchImg"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="full-width-skin content-page">
+        <div class="container">
+            <div class="full-width-content">
+                <h4 class="SubTitle">Campus Map (Romeoville)</h4>
+
+
+
+                <!-- new map -->
+
+
+                <div class="imgWrapper" align="center">
+                    
+                    <!-- Map div -->
+                    <div id="map" style="height:1250px; margin-left: 50px; margin-right: 50px;"></div>
+                    <script type="application/javascript">
+
+                        var map = L.map('map', {
+                            zoomDelta: 0.25,
+                            zoomSnap: 0,
+                            boxZoom: true,
+                            trackResize: true
+                        }).setView([41.60414, -88.08072], 17.25);
+
+
+                        // map layers
+
+                        // GeoJSON layers
+                        var vectorLayer = L.geoJSON().addTo(map);
+
+                        // tile layer
+                        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                            maxZoom: 19,
+                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+                        }).addTo(map);
+
+                        
+                        // controls
+
+                        function onMapClick(e) {
+                            popup
+                                .setLatLng(e.latlng)
+                                .setContent(e.latlng.toString())
+                                .openOn(map);
+                        }
+
+                        map.on('click', onMapClick);
+
+                        // watermark
+                        L.Control.Watermark = L.Control.extend({
+                            onAdd: function(map) {
+                                var img = L.DomUtil.create('img');
+
+                                img.src = 'https://lewisu.edu/images/logo90.png';
+                                img.style.width = '300px';
+
+                                return img;
+                            },
+
+                            onRemove: function(map) {
+                                // Nothing to do here
+                            }
+                        });
+
+                        L.control.watermark = function(opts) {
+                            return new L.Control.Watermark(opts);
+                        }
+
+         
