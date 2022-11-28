@@ -44,7 +44,7 @@ function onMapClick(e) {
 }
 map.on('click', onMapClick);
 
-<!-- Watermark -->
+// Watermark
 L.control.watermark = function(opts) {
     return new L.Control.Watermark(opts);
 }
