@@ -1,4 +1,3 @@
-// Connection to database
 const express = require("express");
 const app = express();
 
