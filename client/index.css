@@ -1,9 +1,11 @@
 .h1{
-    text-align: center;
+    align-items: center;
 }
-h1{
+.h2{
     text-align: center;
+    color: maroon;
 }
+
 .body{
     background-color: rgb(246, 237, 235);
 
