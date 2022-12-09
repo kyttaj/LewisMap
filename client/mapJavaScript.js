@@ -89,7 +89,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
     // Methods
     getBuildingLewisMapCode: function () {return this.BuildingLewisMapCode},
@@ -97,7 +96,6 @@ BuildingClass.include({
     getJsonCoordinatesArray: function () {return this.JsonCoordinatesArray},
     getBuildingDescription: function () {return this.BuildingDescription},
     getBuildingHyperlink: function () {return this.BuildingHyperlink},
-    getBuildingKeywords: function () {return this.BuildingKeywords},
     getLocationLatitude: function () {return this.LocationLattitude},
     getLocationLongitude: function () {return this.LocationLongitude},
     getLocationAddressNumber: function () {return this.LocationAddressNumber},
@@ -110,7 +108,6 @@ BuildingClass.include({
     getLocationClosed: function () {return this.LocationClosed},
     getLocationDescription: function () {return this.LocationDescription},
     getLocationHyperlink: function () {return this.LocationHyperlink},
-    getLocationKeywords: function () {return this.LocationKeywords},
 });
 
 // buildingFA18 object
@@ -136,7 +133,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.606235, -88.081317], [41.606233, -88.081],  [41.606111, -88.080997],  [41.606107, -88.080952], [41.605989, -88.080952], [41.605991, -88.080989], [41.605876, -88.080997], [41.60588, -88.08133], [41.605983, -88.081336], [41.605989, -88.081376], [41.606128, -88.081373], [41.606132, -88.081322]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["arts"], ["center"]],
     LocationLatitude: 41.606130913714715,
     LocationLongitude: -88.08113869728327,
     LocationAddressNumber: 0,
@@ -176,7 +172,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.669606, -88.076555], [41.669648, -88.076594], [41.669806, -88.076597], [41.669816, -88.076063], [41.66979, -88.076011], [41.669616, -88.076003], [41.669612, -88.076111], [41.669646, -88.076146], [41.669612, -88.076222], [41.66964, -88.076257], [41.669612, -88.076335], [41.669636, -88.07637], [41.669608, -88.076446], [41.669634, -88.076473]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["shipping"], ["receiving"]],
     LocationLatitude: 41.669815343026166,
     LocationLongitude: -88.07630753096431,
     LocationAddressNumber: 1312,
@@ -189,7 +184,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "Shipping/Receiving",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -216,7 +210,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.606621, -88.080927], [41.606641, -88.080403], [41.606604, -88.080403], [41.606606, -88.080387], [41.606719, -88.080387], [41.606727, -88.079854], [41.606787, -88.079762], [41.606682, -88.079647], [41.60665, -88.079695], [41.60663, -88.079679], [41.606277, -88.07988], [41.606277, -88.079819], [41.606243, -88.079808], [41.606245, -88.079314], [41.605974, -88.079309], [41.605968, -88.079998], [41.605956, -88.080006], [41.60595, -88.080546], [41.606217, -88.080554], [41.606221, -88.080731], [41.606394, -88.080736], [41.606392, -88.080934], [41.606618, -88.080937]],
     BuildingDescription: "",
     BuildingHyperlink: "https://www.lewisu.edu/sciencecenter/index.htm",
-    BuildingKeywords: [["academic"], ["science"], ["center"], ["academic science center"], ["science center"]],
     LocationLatitude: 41.606621,
     LocationLongitude: -88.080927,
     LocationAddressNumber: 1312,
@@ -229,7 +222,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -256,7 +248,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.60295, -88.079174], [41.602937, -88.07882], [41.6024, -88.078818], [41.602396, -88.078748], [41.602278, -88.078748], [41.602275, -88.079306], [41.602402, -88.079315], [41.602402, -88.079174]],
     BuildingDescription: "",
     BuildingHyperlink: "https://www.lewisu.edu/sciencecenter/index.htm",
-    BuildingKeywords: [["benilde"], ["hall"], ["benilde hall"]],
     LocationLatitude: 41.602668975234245,
     LocationLongitude: -88.07901160213044,
     LocationAddressNumber: 0,
@@ -269,7 +260,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -296,7 +286,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.605737, -88.079219], [41.605741, -88.078963], [41.605796, -88.078957], [41.605796, -88.07885], [41.605748, -88.078848],[41.605748, -88.078748], [41.605122, -88.078727], [41.605112, -88.07921]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["brother"], ["paul"], ["french"], ["fsc"], ["learning"], ["resource"], ["brother paul french"], ["fsc learning resource center"], ["lrc"], ["learning resource center"], ["library"]],
     LocationLatitude: 41.605737,
     LocationLongitude: -88.079219,
     LocationAddressNumber: 0,
@@ -309,7 +298,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -336,7 +324,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.601399, -88.077981], [41.601082, -88.077575], [41.601001, -88.077666], [41.601325, -88.078054]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["cody hall"], ["cody"], ["hall"]],
     LocationLatitude: 41.60125595396016,
     LocationLongitude: -88.077823802130457,
     LocationAddressNumber: 0,
@@ -349,7 +336,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -376,7 +362,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.602896, -88.080763], [41.60289, -88.080172], [41.60277, -88.08017], [41.602768, -88.080057], [41.60268, -88.080055], [41.602678, -88.079993], [41.602525, -88.07999], [41.602525, -88.080057], [41.602402, -88.080059], [41.602405, -88.080326], [41.602351, -88.080331], [41.602347, -88.080186], [41.602266, -88.080189], [41.602268, -88.080782], [41.602343, -88.080783], [41.602339, -88.080639], [41.602477, -88.080642], [41.602481, -88.080924], [41.602667, -88.080921], [41.602667, -88.080661], [41.602816, -88.080658], [41.602818, -88.080763], [41.602892, -88.080763]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["de la salle hall"], ["de"], ["la"], ["salle"], ["hall"]],
     LocationLatitude: 41.602896,
     LocationLongitude: -88.080763,
     LocationAddressNumber: 0,
@@ -389,7 +374,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -416,7 +400,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.60128, -88.083037], [41.601282, -88.082745], [41.601169, -88.082742], [41.601167, -88.082718], [41.601033, -88.082718], [41.601035, -88.082758], [41.600927, -88.082761], [41.600927, -88.083048], [41.601029, -88.083051], [41.601031, -88.083091], [41.601171, -88.083091], [41.601173, -88.083035]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["dorothy day hall"], ["dorothy"], ["day"], ["hall"]],
     LocationLatitude: 41.60128,
     LocationLongitude: -88.083037,
     LocationAddressNumber: 0,
@@ -429,7 +412,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -456,7 +438,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.604675, -88.079207], [41.604675, -88.078765], [41.60436, -88.078767], [41.604358, -88.078915], [41.604555, -88.078923], [41.604555, -88.079202]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["founders hall"], ["founders"], ["hall"]],
     LocationLatitude: 41.60128,
     LocationLongitude: -88.083037,
     LocationAddressNumber: 0,
@@ -469,7 +450,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -496,7 +476,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.605552, -88.082404], [41.60556, -88.081718], [41.605257, -88.08170], [41.605042, -88.08193], [41.604976, -88.081846], [41.604882, -88.081916], [41.60481, -88.081916], [41.60481, -88.081747], [41.603999, -88.081736], [41.603987, -88.082345], [41.604797, -88.082369], [41.604795, -88.082353], [41.605211, -88.082372], [41.605213, -88.082399]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["jfk student recreation and sports center"], ["jfk"], ["student"], ["recreation"], ["sports"], ["sport"], ["center"]],
     LocationLatitude: 41.60128,
     LocationLongitude: -88.083037,
     LocationAddressNumber: 0,
@@ -509,7 +488,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -536,7 +514,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.607125, -88.079421], [41.607122, -88.079291], [41.606887, -88.079288], [41.606889, -88.079424]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["mcnamara hall"], ["mcnamara"], ["hall"]],
     LocationLatitude: 41.607125,
     LocationLongitude: -88.079421,
     LocationAddressNumber: 0,
@@ -549,7 +526,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -576,7 +552,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.601733, -88.082361], [41.601735, -88.082064], [41.601606, -88.082058], [41.601602, -88.082034], [41.601484, -88.082034], [41.601484, -88.082062], [41.601366, -88.082072], [41.60137, -88.082375], [41.601482, -88.082378], [41.60148, -88.08241], [41.601606, -88.082402], [41.601608, -88.082369], [41.601733, -88.082361]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["mother teresa hall"], ["mother"], ["teresa"], ["hall"]],
     LocationLatitude: 41.601733,
     LocationLongitude: -88.082361,
     LocationAddressNumber: 0,
@@ -589,7 +564,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -616,7 +590,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.604352, -88.079618], [41.604352, -88.079462], [41.604272, -88.079459], [41.604268, -88.079435], [41.604226, -88.079435], [41.604228, -88.079365], [41.604206, -88.079363], [41.60421, -88.079162], [41.604226, -88.079164], [41.604224, -88.079006], [41.604214, -88.078998], [41.604214, -88.078888], [41.604089, -88.078993], [41.604077, -88.078995], [41.604075, -88.079135], [41.604096, -88.07914], [41.604091, -88.079373], [41.604073, -88.079376], [41.604071, -88.079513], [41.604081, -88.079518], [41.604079, -88.079636], [41.60426, -88.079647], [41.60426, -88.079617]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["north hall"], ["north"], ["hall"]],
     LocationLatitude: 41.604352,
     LocationLongitude: -88.079618,
     LocationAddressNumber: 0,
@@ -629,7 +602,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -656,7 +628,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.601721, -88.081272], [41.601725, -88.08101], [41.60161, -88.081007], [41.601608, -88.080948], [41.60148, -88.080948], [41.601478, -88.080999], [41.601364, -88.081007], [41.601364, -88.081288], [41.601478, -88.081291], [41.601478, -88.081326], [41.601598, -88.081321], [41.601602, -88.081275]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["pope john paul ii hall"], ["pope"], ["john"], ["paul"], ["ii"], ["hall"]],
     LocationLatitude: 41.601721,
     LocationLongitude: -88.081272,
     LocationAddressNumber: 0,
@@ -669,7 +640,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -696,7 +666,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.602561, -88.083855], [41.602565, -88.083676], [41.602325, -88.083676], [41.602323, -88.083858]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["the powerhouse flex and fitness center"], ["powerhouse"], ["flex"], ["fitness"], ["center"]],
     LocationLatitude: 41.601721,
     LocationLongitude: -88.081272,
     LocationAddressNumber: 0,
@@ -709,7 +678,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -736,7 +704,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.601641, -88.079321], [41.601637, -88.078699], [41.601547, -88.078694], [41.601545, -88.079324]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["ryan hall"], ["ryan"], ["hall"]],
     LocationLatitude: 41.601641,
     LocationLongitude: -88.079321,
     LocationAddressNumber: 0,
@@ -749,7 +716,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -776,7 +742,6 @@ BuildingClass.include({
     JsonCoordinatesArray: [[41.605001, -88.081471], [41.605006, -88.081288], [41.604784, -88.081275], [41.604787, -88.081063], [41.604814, -88.08107], [41.604816, -88.080908], [41.604657, -88.080905], [41.604653, -88.081042], [41.604683, -88.081047], [41.604677, -88.081278], [41.604473, -88.081283], [41.604471, -88.081474], [41.604675, -88.081476], [41.604681, -88.0815], [41.604777, -88.081503], [41.604779, -88.081471]],
     BuildingDescription: "",
     BuildingHyperlink: "",
-    BuildingKeywords: [["sheil hall"], ["sheil"], ["hall"]],
     LocationLatitude: 41.601641,
     LocationLongitude: -88.079321,
     LocationAddressNumber: 0,
@@ -789,7 +754,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -814,9 +778,8 @@ BuildingClass.include({
     BuildingLewisMapCode: "SH49",
     BuildingName: "South Hall",
     JsonCoordinatesArray: [[41.602905, -88.08336], [41.6029, -88.082784], [41.602806, -88.082781], [41.602806, -88.082781],  [41.602688, -88.082821], [41.602682, -88.082642], [41.602593, -88.082642], [41.602591, -88.082593], [41.602591, -88.082639], [41.602589, -88.082588], [41.602571, -88.082588], [41.602571, -88.08254], [41.602489, -88.082534], [41.602487, -88.082601], [41.602461, -88.082604], [41.602459, -88.082741], [41.602461, -88.082736], [41.602489, -88.082736], [41.602489, -88.082867], [41.602403, -88.08287], [41.602401, -88.082797], [41.602206, -88.082797], [41.602208, -88.083379], [41.602242, -88.083387], [41.602242, -88.08342], [41.602304, -88.083411], [41.602306, -88.083368], [41.602397, -88.083366], [41.602397, -88.082929], [41.602497, -88.082926], [41.602497, -88.083205], [41.602676, -88.083202], [41.602682, -88.082883], [41.602814, -88.082889], [41.602822, -88.083358]],
-    BuildingDescription: "",
-    BuildingHyperlink: "",
-    BuildingKeywords: [["south hall"], ["south"], ["hall"]],
+    BuildingDescription: "The College of Nursing and Health Sciences encompasses the fields of nursing, occupational therapy, speech-language pathology, and exercise and movement science.",
+    BuildingHyperlink: "<https://www.lewisu.edu/academics/nursing/index.htm</p>",
     LocationLatitude: 41.602905,
     LocationLongitude: -88.08336,
     LocationAddressNumber: 0,
@@ -829,7 +792,6 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
 
 });
 
@@ -844,12 +806,8 @@ let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
 polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
+polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode + '<p></b>Description: ' + buildingSH49.BuildingDescription + '</b><br>Website: <a href=' + buildingSH49.BuildingHyperlink + ' target= _blank>' + buildingSH49.BuildingName + "<br>" + "<a href=" + buildingSH49.BuildingHyperlink + " target= '_blank'>" + buildingSH49.BuildingHyperlink + " Website</a>");
 popup = L.popup();
-
-
-
-
 
 
 
