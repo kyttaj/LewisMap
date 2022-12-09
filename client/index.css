@@ -30,7 +30,6 @@
     align-content: center;
     height: available;
     width: available;
-    border: 1px solid green;
     padding: 10px;
 }
 
@@ -40,7 +39,6 @@
     max-height: 1250px;
     min-height: 800px;
     width: available;
-    border: 1px solid green;
     padding: 10px;
 }
 
