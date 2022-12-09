@@ -814,11 +814,11 @@ popup = L.popup();
 // Test area
 // variable to hold searchFeedback to change text value on html page
 var searchFeedback = document.getElementById("searchFeedback");
-searchFeedback.firstChild.nodeValue = "This b it!"
+searchFeedback.firstChild.nodeValue = "Search Building: " + buildingSH49.BuildingLewisMapCode;
 
 // variable to hold searchReport to change text value on html page
 var searchReport = document.getElementById("searchReport");
-searchReport.firstChild.nodeValue = "testing... testing...";
+searchReport.firstChild.nodeValue = buildingSH49.BuildingName + "<br>" + buildingSH49.BuildingLewisMapCode + " --- " + buildingSH49.BuildingDescription + " --- " + buildingSH49.BuildingHyperlink;
 
 
 

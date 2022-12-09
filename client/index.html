@@ -20,8 +20,9 @@
     <link rel="script" src="mapJavaScript.js">
 </head>
 <body>
-<div class="wrapper" id="wrapperId">
 
+<div class="wrapper" id="wrapperPage">
+<div class="divleft" id="wrapperId">
     <!-- Header -->
 <h1><img src="https://lewisu.edu/images/logo90.png" alt="Lewis Logo"></h1>
 <h2>Lewis University Campus Map</h2>
@@ -53,7 +54,11 @@
                 .addEventListener("click", searchFeedbackCampus);
         </script>
 
-    </div>
+        <!-- Search Report area -->
+        <h2>Directories</h2>
+ 
+        <p id="searchReport">Campus Directory</p>
+</div>
 
 
 
@@ -64,14 +69,7 @@
     </script>
 </div>
 
-    <!-- Directory DIV -->
-    <div class="wrapper" id="wrapperSearchReport">
-        <h2>Directories</h2>
-    
-     <!-- Search Report area -->
-     <p id="searchReport">Campus Directory</p>
-    
-    </div>    
+</div>     
 
 </body>
 </html>
