@@ -779,7 +779,7 @@ BuildingClass.include({
     BuildingName: "South Hall",
     JsonCoordinatesArray: [[41.602905, -88.08336], [41.6029, -88.082784], [41.602806, -88.082781], [41.602806, -88.082781],  [41.602688, -88.082821], [41.602682, -88.082642], [41.602593, -88.082642], [41.602591, -88.082593], [41.602591, -88.082639], [41.602589, -88.082588], [41.602571, -88.082588], [41.602571, -88.08254], [41.602489, -88.082534], [41.602487, -88.082601], [41.602461, -88.082604], [41.602459, -88.082741], [41.602461, -88.082736], [41.602489, -88.082736], [41.602489, -88.082867], [41.602403, -88.08287], [41.602401, -88.082797], [41.602206, -88.082797], [41.602208, -88.083379], [41.602242, -88.083387], [41.602242, -88.08342], [41.602304, -88.083411], [41.602306, -88.083368], [41.602397, -88.083366], [41.602397, -88.082929], [41.602497, -88.082926], [41.602497, -88.083205], [41.602676, -88.083202], [41.602682, -88.082883], [41.602814, -88.082889], [41.602822, -88.083358]],
     BuildingDescription: "The College of Nursing and Health Sciences encompasses the fields of nursing, occupational therapy, speech-language pathology, and exercise and movement science.",
-    BuildingHyperlink: "<https://www.lewisu.edu/academics/nursing/index.htm</p>",
+    BuildingHyperlink: "https://www.lewisu.edu/academics/nursing/index.htm",
     LocationLatitude: 41.602905,
     LocationLongitude: -88.08336,
     LocationAddressNumber: 0,
@@ -806,23 +806,8 @@ let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
 polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-polygon.onMapClick.changeSearchFeedback();
-//polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode + '<p></b>Description: ' + buildingSH49.BuildingDescription + '</b><br>Website: <a href=' + buildingSH49.BuildingHyperlink + ' target= _blank>' + buildingSH49.BuildingName + "<br>" + "<a href=" + buildingSH49.BuildingHyperlink + " target= '_blank'>" + buildingSH49.BuildingHyperlink + " Website</a>");
-//popup = L.popup();
-
-function changeSearchFeedback() {
-
-    if (!document.getElementById) return;
-
-    var newtitle = document.changeform.newtitle.value;
-
-    var searchBox = document.getElementById("searchBox");
-
-    searchBox.firstChild.nodeValue="testing";
-
-  }
-
-
+polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '<br>Building:</b> ' + buildingSH49.BuildingLewisMapCode + '<br><b>Description:</b> ' + buildingSH49.BuildingDescription + '<br><b>Website:</b> <a href="' + buildingSH49.BuildingHyperlink + '" target= _blank>' + buildingSH49.BuildingName + " Website</a>");
+popup = L.popup();
 
 // marker function
 // markers with icons
