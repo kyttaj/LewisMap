@@ -806,7 +806,8 @@ let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
 polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-polygon.onMapClick.changeSearchFeedback();
+
+polygon.on("click", changeSearchFeedback);
 //polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode + '<p></b>Description: ' + buildingSH49.BuildingDescription + '</b><br>Website: <a href=' + buildingSH49.BuildingHyperlink + ' target= _blank>' + buildingSH49.BuildingName + "<br>" + "<a href=" + buildingSH49.BuildingHyperlink + " target= '_blank'>" + buildingSH49.BuildingHyperlink + " Website</a>");
 //popup = L.popup();
 
