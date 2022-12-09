@@ -816,7 +816,9 @@ popup = L.popup();
 var searchFeedback = document.getElementById("searchFeedback");
 searchFeedback.firstChild.nodeValue = "This b it!"
 
-
+// variable to hold searchReport to change text value on html page
+var searchReport = document.getElementById("searchReport");
+searchReport.firstChild.nodeValue = "testing... testing...";
 
 
 
