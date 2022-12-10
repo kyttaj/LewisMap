@@ -125,6 +125,7 @@ polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' 
 let popup = L.popup();
 
 
+
 // new building
 BuildingClass.include({
     // add properties
@@ -807,27 +808,29 @@ let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
 polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-//polygon.bindPopup("yep!");
+//polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
 //popup = L.popup();
+
 
 
 // Test area
 
-
 // polygon on click function
-function onPolygonClick(e) {
-    document.getElementById("searchFeedback").innerHTML = "Search Building: " + buildingSH49.BuildingName;
-    document.getElementById("buildingName").innerHTML = "<b>" + buildingSH49.BuildingName + "</b>";
-    document.getElementById("buildingMapCode").innerHTML = "Building: " + buildingSH49.BuildingLewisMapCode;
-    document.getElementById("buildingDescription").innerHTML = buildingSH49.BuildingDescription;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + buildingSH49.BuildingHyperlink + " target= '_blank'>" + buildingSH49.BuildingName +" Website</a>";
-    document.getElementById("buildingCityState").innerHTML = buildingSH49.LocationCity + ", " + buildingSH49.LocationState;
+function onClick(e) {
+    let building = buildingFA18;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + building.BuildingName;
+    document.getElementById("buildingName").innerHTML = "<b>" + building.BuildingName + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + building.BuildingLewisMapCode;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + building.BuildingHyperlink + " target= '_blank'>" + building.BuildingName + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = building.BuildingDescription;
+    document.getElementById("buildingCityState").innerHTML = building.LocationCity + ", " + building.LocationState;
     popup
         .setLatLng(e.latlng)
-        .setContent('<b>' + buildingSH49.BuildingName + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode)
+        .setContent('<b>' + building.BuildingName + '</b><br>Building: ' + building.BuildingLewisMapCode)
     .openOn(map);
 }
-polygon.on('click', onPolygonClick);
+polygon.on('click', onClick);
+
 
 
 
