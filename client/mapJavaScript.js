@@ -36,13 +36,13 @@ L.Control.Watermark = L.Control.extend({
 
 // controls
 // lat/lng onClick()
-function onMapClick(e) {
-    popup
-        .setLatLng(e.latlng)
-        .setContent(e.latlng.toString())
-        .openOn(map);
-}
-map.on('click', onMapClick);
+// function onMapClick(e) {
+//     popup
+//         .setLatLng(e.latlng)
+//         .setContent(e.latlng.toString())
+//         .openOn(map);
+// }
+// map.on('click', onMapClick);
 
 // Watermark
 L.control.watermark = function(opts) {
@@ -772,6 +772,7 @@ polygon.bindPopup('<b>' + buildingSL26.getBuildingName() + '</b><br>Building: ' 
 popup = L.popup();
 
 
+
 // new building
 BuildingClass.include({
     // add properties
@@ -806,25 +807,29 @@ let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
 polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '<br>Building:</b> ' + buildingSH49.BuildingLewisMapCode + '<br><b>Description:</b> ' + buildingSH49.BuildingDescription + '<br><b>Website:</b> <a href="' + buildingSH49.BuildingHyperlink + '" target= _blank>' + buildingSH49.BuildingName + " Website</a><p>" + searchFeedback);
-popup = L.popup();
-
+//polygon.bindPopup("yep!");
+//popup = L.popup();
 
 
 // Test area
 // variable to hold searchFeedback to change text value on html page
 var searchFeedback = document.getElementById("searchFeedback");
-searchFeedback.firstChild.nodeValue = "Search Building: " + buildingSH49.BuildingLewisMapCode;
+//searchFeedback.firstChild.nodeValue = "Search Building: " + buildingSH49.BuildingLewisMapCode;
 
 // variable to hold searchReport to change text value on html page
-var searchReport = document.getElementById("searchReport");
-searchReport.firstChild.nodeValue = buildingSH49.BuildingName + "<br>" + buildingSH49.BuildingLewisMapCode + " --- " + buildingSH49.BuildingDescription + " --- " + buildingSH49.BuildingHyperlink;
+//var searchReport = document.getElementById("searchReport");
+//searchReport.firstChild.nodeValue = buildingSH49.BuildingName;
 
-
-
-
-
-
+// polygon on click function
+function onPolygonClick(e) {
+    var searchReport = document.getElementById("searchReport");
+    searchReport.firstChild.nodeValue = buildingSH49.BuildingName;
+    popup
+        .setLatLng(e.latlng)
+        .setContent('<p>Hello world!<br />This is a nice popup.</p>' + buildingSH49.BuildingName)
+    .openOn(map);
+}
+polygon.on('click', onPolygonClick);
 
 
 
