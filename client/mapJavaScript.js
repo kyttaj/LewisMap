@@ -108,6 +108,7 @@ BuildingClass.include({
     getLocationClosed: function () {return this.LocationClosed},
     getLocationDescription: function () {return this.LocationDescription},
     getLocationHyperlink: function () {return this.LocationHyperlink},
+    toString: function () {return this.BuildingName + "<br>" + this.BuildingLewisMapCode + "<br>" + this.BuildingDescription + "<br>" + this.BuildingHyperlink},
 });
 
 // buildingFA18 object
@@ -123,6 +124,20 @@ let FA18 = [buildingFA18.JsonCoordinatesArray];
 let polygon = L.polygon(FA18, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
 polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' + buildingFA18.BuildingLewisMapCode);
 let popup = L.popup();
+
+// polygon click function
+function onClick(e) {
+    let bldg = buildingFA18;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + bldg.BuildingName;
+    document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = bldg.BuildingDescription;
+    document.getElementById("buildingCityState").innerHTML = bldg.LocationCity + ", " + bldg.LocationState;
+}
+polygon.on('click', onClick);
+
+
 
 
 
@@ -304,7 +319,6 @@ BuildingClass.include({
 
 // buildingLR33 object
 let buildingLR33 = new BuildingClass();
-// add object to buildings array
 buildings.push(buildingLR33);
 
 // Building Vectors
@@ -773,7 +787,6 @@ polygon.bindPopup('<b>' + buildingSL26.getBuildingName() + '</b><br>Building: ' 
 popup = L.popup();
 
 
-
 // new building
 BuildingClass.include({
     // add properties
@@ -807,29 +820,38 @@ buildings.push(buildingSH49);
 let SH49 = [buildingSH49.JsonCoordinatesArray];
 
 // SH49 polygon properties and popup
-polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-//polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
-//popup = L.popup();
+polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "polygonSH49" }).addTo(vectorLayer);
+polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
+popup = L.popup();
+
+
+
 
 
 
 // Test area
-
+// building popup functions
 // polygon on click function
-function onClick(e) {
-    let building = buildingFA18;
-    document.getElementById("searchFeedback").innerHTML = "Search Building: " + building.BuildingName;
-    document.getElementById("buildingName").innerHTML = "<b>" + building.BuildingName + "</b>";
-    document.getElementById("buildingMapCode").innerHTML = "Building: " + building.BuildingLewisMapCode;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + building.BuildingHyperlink + " target= '_blank'>" + building.BuildingName + " Website</a>";
-    document.getElementById("buildingDescription").innerHTML = building.BuildingDescription;
-    document.getElementById("buildingCityState").innerHTML = building.LocationCity + ", " + building.LocationState;
-    popup
-        .setLatLng(e.latlng)
-        .setContent('<b>' + building.BuildingName + '</b><br>Building: ' + building.BuildingLewisMapCode)
-    .openOn(map);
-}
-polygon.on('click', onClick);
+// function onClick(e) {
+//     getElements = "";
+//     getElements;
+//     return;
+//     // popup
+//     //     .setLatLng(e.latlng)
+//     //     .setContent('<b>' + building.BuildingName + '</b><br>Building: ' + e.getBuildingLewisMapCode)
+//     // .openOn(map);
+// }
+// polygon.on('click', onClick);
+
+// function getElements(bldg) {
+//     document.getElementById("searchFeedback").innerHTML = "Search Building: " + bldg.BuildingName;
+//     document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
+//     document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
+//     document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
+//     document.getElementById("buildingDescription").innerHTML = bldg.BuildingDescription;
+//     document.getElementById("buildingCityState").innerHTML = bldg.LocationCity + ", " + bldg.LocationState;
+// };
+
 
 
 
