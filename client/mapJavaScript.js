@@ -812,21 +812,19 @@ polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "pol
 
 
 // Test area
-// variable to hold searchFeedback to change text value on html page
-var searchFeedback = document.getElementById("searchFeedback");
-//searchFeedback.firstChild.nodeValue = "Search Building: " + buildingSH49.BuildingLewisMapCode;
 
-// variable to hold searchReport to change text value on html page
-//var searchReport = document.getElementById("searchReport");
-//searchReport.firstChild.nodeValue = buildingSH49.BuildingName;
 
 // polygon on click function
 function onPolygonClick(e) {
-    var searchReport = document.getElementById("searchReport");
-    searchReport.firstChild.nodeValue = buildingSH49.BuildingName;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + buildingSH49.BuildingName;
+    document.getElementById("buildingName").innerHTML = "<b>" + buildingSH49.BuildingName + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + buildingSH49.BuildingLewisMapCode;
+    document.getElementById("buildingDescription").innerHTML = buildingSH49.BuildingDescription;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + buildingSH49.BuildingHyperlink + " target= '_blank'>" + buildingSH49.BuildingName +" Website</a>";
+    document.getElementById("buildingCityState").innerHTML = buildingSH49.LocationCity + ", " + buildingSH49.LocationState;
     popup
         .setLatLng(e.latlng)
-        .setContent('<p>Hello world!<br />This is a nice popup.</p>' + buildingSH49.BuildingName)
+        .setContent('<b>' + buildingSH49.BuildingName + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode)
     .openOn(map);
 }
 polygon.on('click', onPolygonClick);
