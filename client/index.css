@@ -44,12 +44,17 @@
 }
 
 .mapDiv {
-    margin: 1% 5% 0% 5%;
-    align-content: center;
-    max-height: 1250px;
-    min-height: 800px;
-    width: available;
+    margin: auto 5px;
+    float: center;
+    height: 900px;
+    right: -60px;
+
+    width: 800px;
     padding: 10px;
+    border: 3px solid #73AD21;
+
+    
+   
 }
 
 .polygon {
