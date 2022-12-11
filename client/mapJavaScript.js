@@ -58,7 +58,10 @@ L.control.scale({ position: 'bottomright' }).addTo(map);
 
 // Building Class
 // declare building array
-const buildings = new Array(20);
+const buildings = [];
+// declare campusData array
+const campusData = [];
+
 let BuildingClass = L.Class.extend({
     // add one property
     BuildingLewisMapCode: "",
@@ -134,6 +137,9 @@ let FA18city = buildingFA18.getLocationCity();
 let FA18state = buildingFA18.getLocationState();
 let FA18zip = buildingFA18.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + FA18link + " target= '_blank'>" + FA18name + " Website</a>\t" + FA18code);
+
 // polygon click function
 function onClickFA18(e) {
     if (!document.getElementById) return;
@@ -195,6 +201,9 @@ let SU15city = buildingSU15.getLocationCity();
 let SU15state = buildingSU15.getLocationState();
 let SU15zip = buildingSU15.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + SU15link + " target= '_blank'>" + SU15name + " Website</a>\t" + SU15code);
+
 // polygon click function
 function onClickSU15(e) {
     if (!document.getElementById) return;
@@ -254,6 +263,9 @@ let SR1312desc = buildingSR1312.getBuildingDescription();
 let SR1312city = buildingSR1312.getLocationCity();
 let SR1312state = buildingSR1312.getLocationState();
 let SR1312zip = buildingSR1312.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + SR1312link + " target= '_blank'>" + SR1312name + " Website</a>\t" + SR1312code);
 
 // polygon click function
 function onClickSR1312(e) {
@@ -315,6 +327,9 @@ let AS12city = buildingAS12.getLocationCity();
 let AS12state = buildingAS12.getLocationState();
 let AS12zip = buildingAS12.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + AS12link + " target= '_blank'>" + AS12name + " Website</a>\t" + AS12code);
+
 // polygon click function
 function onClickAS12(e) {
     if (!document.getElementById) return;
@@ -375,6 +390,9 @@ let BE43city = buildingBE43.getLocationCity();
 let BE43state = buildingBE43.getLocationState();
 let BE43zip = buildingBE43.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + BE43link + " target= '_blank'>" + BE43name + " Website</a>\t" + BE43code);
+
 // polygon click function
 function onClickBE43(e) {
     if (!document.getElementById) return;
@@ -433,6 +451,9 @@ let LR33desc = buildingLR33.getBuildingDescription();
 let LR33city = buildingLR33.getLocationCity();
 let LR33state = buildingLR33.getLocationState();
 let LR33zip = buildingLR33.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + LR33link + " target= '_blank'>" + LR33name + " Website</a>\t" + LR33code);
 
 // polygon click function
 function onClickLR33(e) {
@@ -494,6 +515,9 @@ let CD61city = buildingCD61.getLocationCity();
 let CD61state = buildingCD61.getLocationState();
 let CD61zip = buildingCD61.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + CD61link + " target= '_blank'>" + CD61name + " Website</a>\t" + CD61code);
+
 // polygon click function
 function onClickCD61(e) {
     if (!document.getElementById) return;
@@ -554,6 +578,9 @@ let DL45city = buildingDL45.getLocationCity();
 let DL45state = buildingDL45.getLocationState();
 let DL45zip = buildingDL45.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + DL45link + " target= '_blank'>" + DL45name + " Website</a>\t" + CD61code);
+
 // polygon click function
 function onClickDL45(e) {
     if (!document.getElementById) return;
@@ -612,6 +639,9 @@ let DO55desc = buildingDO55.getBuildingDescription();
 let DO55city = buildingDO55.getLocationCity();
 let DO55state = buildingDO55.getLocationState();
 let DO55zip = buildingDO55.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + DO55link + " target= '_blank'>" + DO55name + " Website</a>\t" + DO55code);
 
 // polygon click function
 function onClickDO55(e) {
@@ -673,6 +703,9 @@ let FO36city = buildingFO36.getLocationCity();
 let FO36state = buildingFO36.getLocationState();
 let FO36zip = buildingFO36.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + FO36link + " target= '_blank'>" + FO36name + " Website</a>\t" + FO36code);
+
 // polygon click function
 function onClickFO36(e) {
     if (!document.getElementById) return;
@@ -732,6 +765,9 @@ let SC23desc = buildingSC23.getBuildingDescription();
 let SC23city = buildingSC23.getLocationCity();
 let SC23state = buildingSC23.getLocationState();
 let SC23zip = buildingSC23.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + SC23link + " target= '_blank'>" + SC23name + " Website</a>\t" + SC23code);
 
 // polygon click function
 function onClickSC23(e) {
@@ -793,6 +829,9 @@ let MC11city = buildingMC11.getLocationCity();
 let MC11state = buildingMC11.getLocationState();
 let MC11zip = buildingMC11.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + MC11link + " target= '_blank'>" + MC11name + " Website</a>\t" + MC11code);
+
 // polygon click function
 function onClickMC11(e) {
     if (!document.getElementById) return;
@@ -852,6 +891,9 @@ let MT56desc = buildingMT56.getBuildingDescription();
 let MT56city = buildingMT56.getLocationCity();
 let MT56state = buildingMT56.getLocationState();
 let MT56zip = buildingMT56.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + MT56link + " target= '_blank'>" + MT56name + " Website</a>\t" + MT56code);
 
 // polygon click function
 function onClickMT56(e) {
@@ -913,6 +955,9 @@ let NO39city = buildingNO39.getLocationCity();
 let NO39state = buildingNO39.getLocationState();
 let NO39zip = buildingNO39.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + NO39link + " target= '_blank'>" + NO39name + " Website</a>\t" + NO39code);
+
 // polygon click function
 function onClickNO39(e) {
     if (!document.getElementById) return;
@@ -972,6 +1017,9 @@ let JP58desc = buildingJP58.getBuildingDescription();
 let JP58city = buildingJP58.getLocationCity();
 let JP58state = buildingJP58.getLocationState();
 let JP58zip = buildingJP58.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + JP58link + " target= '_blank'>" + JP58name + " Website</a>\t" + JP58code);
 
 // polygon click function
 function onClickJP58(e) {
@@ -1033,6 +1081,9 @@ let PH51city = buildingPH51.getLocationCity();
 let PH51state = buildingPH51.getLocationState();
 let PH51zip = buildingPH51.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + PH51link + " target= '_blank'>" + PH51name + " Website</a>\t" + PH51code);
+
 // polygon click function
 function onClickPH51(e) {
     if (!document.getElementById) return;
@@ -1093,6 +1144,9 @@ let RY59city = buildingRY59.getLocationCity();
 let RY59state = buildingRY59.getLocationState();
 let RY59zip = buildingRY59.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + RY59link + " target= '_blank'>" + RY59name + " Website</a>\t" + RY59code);
+
 // polygon click function
 function onClickRY59(e) {
     if (!document.getElementById) return;
@@ -1151,6 +1205,9 @@ let SL26desc = buildingSL26.getBuildingDescription();
 let SL26city = buildingSL26.getLocationCity();
 let SL26state = buildingSL26.getLocationState();
 let SL26zip = buildingSL26.getLocationZip();
+
+// push data to campusData
+campusData.push("<a href=" + SL26link + " target= '_blank'>" + SL26name + " Website</a>\t" + SL26code);
 
 // polygon click function
 function onClickSL26(e) {
@@ -1211,6 +1268,9 @@ let SH49city = buildingSH49.getLocationCity();
 let SH49state = buildingSH49.getLocationState();
 let SH49zip = buildingSH49.getLocationZip();
 
+// push data to campusData
+campusData.push("<a href=" + SH49link + " target= '_blank'>" + SH49name + " Website</a>\t" + SH49code);
+
 // polygon click function
 function onClickSH49(e) {
     if (!document.getElementById) return;
@@ -1224,6 +1284,30 @@ function onClickSH49(e) {
     return;
 }
 polygon.on('click', onClickSH49);
+
+
+
+
+// Campus search on map click
+function onMapClick(e) {
+    if (!document.getElementById) return;
+    let fLen = campusData.length;
+    campusData.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + campusData[i] + "</li>";
+    }
+    text += "</ul>"
+    document.getElementById("searchFeedback").innerHTML = "Search Campus";
+    document.getElementById("buildingName").innerHTML = "<b>Lewis University Campus</b>";
+    document.getElementById("buildingMapCode").innerHTML = " ";
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=https://lewisu.edu/index.htm target= '_blank'>Lewis University Website</a>";
+    document.getElementById("buildingDescription").innerHTML = "description";
+    document.getElementById("buildingCityState").innerHTML = text;
+    return;
+}
+map.on('click', onMapClick);
 
 
 
