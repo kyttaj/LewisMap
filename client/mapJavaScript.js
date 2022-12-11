@@ -122,23 +122,10 @@ let FA18 = [buildingFA18.JsonCoordinatesArray];
 
 // FA18 polygon properties and popup
 let polygon = L.polygon(FA18, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
+onClick;
+polygon.on('click', onClick);
 polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' + buildingFA18.BuildingLewisMapCode);
 let popup = L.popup();
-
-// polygon click function
-function onClick(e) {
-    let bldg = buildingFA18;
-    document.getElementById("searchFeedback").innerHTML = "Search Building: " + bldg.BuildingName;
-    document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
-    document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
-    document.getElementById("buildingDescription").innerHTML = bldg.BuildingDescription;
-    document.getElementById("buildingCityState").innerHTML = bldg.LocationCity + ", " + bldg.LocationState;
-}
-polygon.on('click', onClick);
-
-
-
 
 
 // new building
@@ -825,7 +812,18 @@ polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' 
 popup = L.popup();
 
 
-
+// polygon click function
+function onClick(e) {
+    let bldg = buildingAS12;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + bldg.BuildingName;
+    document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = bldg.BuildingDescription;
+    document.getElementById("buildingCityState").innerHTML = bldg.LocationCity + ", " + bldg.LocationState;
+    return;
+}
+polygon.on('click', onClick);
 
 
 
