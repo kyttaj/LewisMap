@@ -58,7 +58,7 @@ L.control.scale({ position: 'bottomright' }).addTo(map);
 
 // Building Class
 // declare building array
-const buildings = [];
+const buildings = new Array(20);
 let BuildingClass = L.Class.extend({
     // add one property
     BuildingLewisMapCode: "",
@@ -126,6 +126,8 @@ onClick;
 polygon.on('click', onClick);
 polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' + buildingFA18.BuildingLewisMapCode);
 let popup = L.popup();
+
+let testings = buildingFA18;
 
 
 // new building
@@ -811,11 +813,13 @@ polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "pol
 polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
 popup = L.popup();
 
-
+//document.getElementById("searchFeedback").innerHTML = "Search Building: " + testings;
+    
 // polygon click function
 function onClick(e) {
-    let bldg = buildingAS12;
-    document.getElementById("searchFeedback").innerHTML = "Search Building: " + bldg.BuildingName;
+    if (!document.getElementById) return;
+    let bldg = testings;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + buildingFA18.BuildingName;
     document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
     document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
