@@ -122,12 +122,30 @@ let FA18 = [buildingFA18.JsonCoordinatesArray];
 
 // FA18 polygon properties and popup
 let polygon = L.polygon(FA18, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-onClick;
-polygon.on('click', onClick);
 polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' + buildingFA18.BuildingLewisMapCode);
 let popup = L.popup();
 
-let testings = buildingFA18;
+// building variables
+let FA18name = buildingFA18.getBuildingName();
+let FA18code = buildingFA18.getBuildingLewisMapCode();
+let FA18link = buildingFA18.getBuildingHyperlink();
+let FA18desc = buildingFA18.getBuildingDescription();
+let FA18city = buildingFA18.getLocationCity();
+let FA18state = buildingFA18.getLocationState();
+let FA18zip = buildingFA18.getLocationZip();
+
+// polygon click function
+function onClickFA18(e) {
+    if (!document.getElementById) return;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + FA18name;
+    document.getElementById("buildingName").innerHTML = "<b>" + FA18name + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + FA18code;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + FA18link + " target= '_blank'>" + FA18name + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = FA18desc;
+    document.getElementById("buildingCityState").innerHTML = FA18city + ", " + FA18state;
+    return;
+}
+polygon.on('click', onClickFA18);
 
 
 // new building
@@ -167,6 +185,28 @@ let SU15 = [buildingSU15.JsonCoordinatesArray];
 polygon = L.polygon(SU15, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
 polygon.bindPopup('<b>' + buildingSU15.getBuildingName() + '</b><br>Building: ' + buildingSU15.BuildingLewisMapCode);
 popup = L.popup();
+
+// building variables
+let SU15name = buildingSU15.getBuildingName();
+let SU15code = buildingSU15.getBuildingLewisMapCode();
+let SU15link = buildingSU15.getBuildingHyperlink();
+let SU15desc = buildingSU15.getBuildingDescription();
+let SU15city = buildingSU15.getLocationCity();
+let SU15state = buildingSU15.getLocationState();
+let SU15zip = buildingSU15.getLocationZip();
+
+// polygon click function
+function onClickSU15(e) {
+    if (!document.getElementById) return;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + SU15name;
+    document.getElementById("buildingName").innerHTML = "<b>" + SU15name + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + SU15code;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SU15link + " target= '_blank'>" + SU15name + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = SU15desc;
+    document.getElementById("buildingCityState").innerHTML = SU15city + ", " + SU15state;
+    return;
+}
+polygon.on('click', onClickSU15);
 
 
 // new building
@@ -813,22 +853,28 @@ polygon = L.polygon(SH49, { color: 'green', fillOpacity: .7, weight: 1, id: "pol
 polygon.bindPopup('<b>' + buildingSH49.getBuildingName() + '</b><br>Building: ' + buildingSH49.BuildingLewisMapCode);
 popup = L.popup();
 
-//document.getElementById("searchFeedback").innerHTML = "Search Building: " + testings;
-    
+// building variables
+let SH49name = buildingSH49.getBuildingName();
+let SH49code = buildingSH49.getBuildingLewisMapCode();
+let SH49link = buildingSH49.getBuildingHyperlink();
+let SH49desc = buildingSH49.getBuildingDescription();
+let SH49city = buildingSH49.getLocationCity();
+let SH49state = buildingSH49.getLocationState();
+let SH49zip = buildingSH49.getLocationZip();
+
 // polygon click function
-function onClick(e) {
+function onClickSH49(e) {
     if (!document.getElementById) return;
-    let bldg = testings;
-    document.getElementById("searchFeedback").innerHTML = "Search Building: " + buildingFA18.BuildingName;
-    document.getElementById("buildingName").innerHTML = "<b>" + bldg.BuildingName + "</b>";
-    document.getElementById("buildingMapCode").innerHTML = "Building: " + bldg.BuildingLewisMapCode;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + bldg.BuildingHyperlink + " target= '_blank'>" + bldg.BuildingName + " Website</a>";
-    document.getElementById("buildingDescription").innerHTML = bldg.BuildingDescription;
-    document.getElementById("buildingCityState").innerHTML = bldg.LocationCity + ", " + bldg.LocationState;
+    let bldg = buildingFA18;
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + SH49name;
+    document.getElementById("buildingName").innerHTML = "<b>" + SH49name + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + SH49code;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SH49link + " target= '_blank'>" + SH49name + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = SH49desc;
+    document.getElementById("buildingCityState").innerHTML = SH49city + ", " + SH49state;
     return;
 }
-polygon.on('click', onClick);
-
+polygon.on('click', onClickSH49);
 
 
 // Test area
