@@ -4,7 +4,7 @@ let map = L.map('map', {
     zoomDelta: 0.25,
     zoomSnap: 0,
     boxZoom: true
-}).setView([41.605, -88.080516], 17.25);
+}).setView([41.604182, -88.08067], 17.25);
 
 
 // map layers
