@@ -343,6 +343,12 @@ function onClickAS12(e) {
 }
 polygon.on('click', onClickAS12);
 
+// function onRemoveAS12(e) {
+//     AS12Highlight.remove(vectorLayer);
+//     return;
+// }
+// polygon.remove('mouseout', onRemoveAS12);
+
 
 // new building
 BuildingClass.include({

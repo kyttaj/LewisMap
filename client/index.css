@@ -49,14 +49,22 @@
     height: 900px;
     right: -60px;
 
-    width: 800px;
+    width: auto;
     padding: 10px;
-    border: 3px solid #73AD21;
-
-    
-   
+    border: 1px solid #e8e8e8;
 }
 
 .polygon {
     color: blue;
+}
+
+.searchFeedback {
+    margin: 15px 0px 15px 0px;
+    display: block;
+}
+
+.searchBox {
+    margin: 15px 0px 15px 0px;
+    display: block;
+    width: 100%;
 }

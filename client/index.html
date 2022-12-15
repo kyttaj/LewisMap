@@ -24,19 +24,20 @@
 <div class="wrapper" id="wrapperPage">
 <div class="divleft" id="wrapperId">
     <!-- Header -->
-<h1><img src="https://lewisu.edu/images/logo90.png" alt="Lewis Logo"></h1>
+<h1><img src="https://lewisu.edu/images/logo90.png" alt="Lewis Logo" width="75%"></h1>
+
 <h2>Lewis University Campus Map</h2>
 
 <!-- Search feedback area -->
     <!-- Search box control" -->
     <!-- adding boostrap for btn -->
-        <input type="text" id="searchBox" value="Search" class=" input-group form-control">
+        <input type="text" id="searchBox" class="searchBox">
 
     <!-- Feedback panel -->
-    <p id="searchFeedback">Search campus</p>
+    <p class='searchFeedback' id="searchFeedback">Search campus</p>
 
     <!-- Buttons change feedback panel and search scope -->
-    <input id="change_value_building" type="button" value="Building"class="btn btn-outline-primary mb-3">
+    <!-- <input id="change_value_building" type="button" value="Building"class="btn btn-outline-primary mb-3">
         <script type="text/javascript">
             function searchFeedbackBuilding() {
                 document.getElementById("searchFeedback").innerHTML = "Click on a building to search within the selected building";
@@ -44,9 +45,9 @@
             document
                 .getElementById("change_value_building")
                 .addEventListener("click", searchFeedbackBuilding);
-        </script>
+        </script> -->
         <!-- adding boostrap fpr btn -->
-    <input id="change_value_campus" type="button" value="Campus" class="btn btn-outline-primary mb-3">
+    <!-- <input id="change_value_campus" type="button" value="Campus" class="btn btn-outline-primary mb-3">
         <script type="text/javascript">
             function searchFeedbackCampus() {
                 document.getElementById("searchFeedback").innerHTML = "Search campus";
@@ -54,7 +55,7 @@
             document
                 .getElementById("change_value_campus")
                 .addEventListener("click", searchFeedbackCampus);
-        </script>
+        </script> -->
 
         <!-- Search Report area -->
         <h2>Directories</h2>
