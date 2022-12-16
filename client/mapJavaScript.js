@@ -1537,8 +1537,33 @@ let coffeeIcon = L.icon({
 });
 
 // placing coffee marker
+// coffee click function
+document
+    .getElementById("searchBox")
+    .addEventListener("mouseout", function() {
+        document.getElementById("searchBox").innerHTML = "";
+        document.getElementById("searchFeedback").innerHTML = "Result:";
+        document.getElementById("buildingName").innerHTML = "<b>Courtyard Café</b>";
+        document.getElementById("buildingMapCode").innerHTML = " ";
+        document.getElementById("buildingHyperlink").innerHTML = "<a href='https://content-service.sodexomyway.com/media/NEWStarbucksMenu8.15.22_tcm82-155876.pdf?url=https://lewisu.sodexomyway.com/' target='_blank'>menu</a>";
+        document.getElementById("buildingDescription").innerHTML = "";
+        document.getElementById("buildingCityState").innerHTML = "";
+        document.getElementById("buildingRooms").innerHTML = "";
+        let marker;
+        marker = L.marker([41.602504, -88.080721], {icon: coffeeIcon}).addTo(map);
+        marker.bindPopup("<b>Courtyard Café</b><br>Bldg. DL45<br><a href='https://content-service.sodexomyway.com/media/NEWStarbucksMenu8.15.22_tcm82-155876.pdf?url=https://lewisu.sodexomyway.com/' target='_blank'>menu</a>");
+        popup = L.popup();
+        map.setView([41.602504, -88.080721], 17.25);
+    });
 
-let marker;
-marker = L.marker([41.602504, -88.080721], {icon: coffeeIcon}).addTo(map);
-marker.bindPopup("<b>Courtyard Café</b><br>Bldg. DL45<br><a href='https://content-service.sodexomyway.com/media/NEWStarbucksMenu8.15.22_tcm82-155876.pdf?url=https://lewisu.sodexomyway.com/' target='_blank'>menu</a>");
-popup = L.popup();
+
+// hyperlink click function
+document
+    .getElementById("buildingDescription")
+    .addEventListener("click", function() {
+        let marker;
+        marker = L.marker([41.84646100975679, -87.94560320118678], {icon: coffeeIcon}).addTo(map);
+        marker.bindPopup("<b>Lewis University at Oak Brook</b><br><a href='https://www.lewisu.edu/campuses/oakbrook/index.htm' target='_blank'>Lewis University at Oak Brook Website</a>");
+        popup = L.popup();
+        map.setView([41.84646100975679, -87.94560320118678], 17.25);
+    });
