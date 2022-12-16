@@ -35,15 +35,6 @@ L.Control.Watermark = L.Control.extend({
 });
 
 // controls
-// lat/lng onClick()
-// function onMapClick(e) {
-//     popup
-//         .setLatLng(e.latlng)
-//         .setContent(e.latlng.toString())
-//         .openOn(map);
-// }
-// map.on('click', onMapClick);
-
 // Watermark
 L.control.watermark = function(opts) {
     return new L.Control.Watermark(opts);
@@ -138,7 +129,7 @@ let FA18state = buildingFA18.getLocationState();
 let FA18zip = buildingFA18.getLocationZip();
 
 // push data to campusData
-campusData.push(FA18name + " " + FA18code + "<br>" + FA18desc);
+campusData.push(FA18name + " " + FA18code);
 
 // polygon click function
 function onClickFA18(e) {
@@ -202,7 +193,7 @@ let SU15state = buildingSU15.getLocationState();
 let SU15zip = buildingSU15.getLocationZip();
 
 // push data to campusData
-campusData.push(SU15name + " " + SU15code + "<br>" + SU15desc);
+campusData.push(SU15name + " " + SU15code);
 
 // polygon click function
 function onClickSU15(e) {
@@ -265,7 +256,7 @@ let SR1312state = buildingSR1312.getLocationState();
 let SR1312zip = buildingSR1312.getLocationZip();
 
 // push data to campusData
-campusData.push(SR1312name + " " + SR1312code + "<br>" + SR1312desc);
+campusData.push(SR1312name + " " + SR1312code);
 
 // polygon click function
 function onClickSR1312(e) {
@@ -328,7 +319,7 @@ let AS12state = buildingAS12.getLocationState();
 let AS12zip = buildingAS12.getLocationZip();
 
 // push data to campusData
-campusData.push(AS12name + " " + AS12code + "<br><a href=" + AS12link + " target= '_blank'>" + AS12name + " Website</a><br>" + AS12desc);
+campusData.push(AS12name + " " + AS12code);
 
 // polygon click function
 function onClickAS12(e) {
@@ -342,12 +333,6 @@ function onClickAS12(e) {
     return;
 }
 polygon.on('click', onClickAS12);
-
-// function onRemoveAS12(e) {
-//     AS12Highlight.remove(vectorLayer);
-//     return;
-// }
-// polygon.remove('mouseout', onRemoveAS12);
 
 
 // new building
@@ -397,7 +382,7 @@ let BE43state = buildingBE43.getLocationState();
 let BE43zip = buildingBE43.getLocationZip();
 
 // push data to campusData
-campusData.push(BE43name + " " + BE43code + "<br>" + BE43desc);
+campusData.push(BE43name + " " + BE43code);
 
 // polygon click function
 function onClickBE43(e) {
@@ -459,7 +444,7 @@ let LR33state = buildingLR33.getLocationState();
 let LR33zip = buildingLR33.getLocationZip();
 
 // push data to campusData
-campusData.push(LR33name + " " + LR33code + "<br>" + LR33desc);
+campusData.push(LR33name + " " + LR33code);
 
 // polygon click function
 function onClickLR33(e) {
@@ -522,7 +507,7 @@ let CD61state = buildingCD61.getLocationState();
 let CD61zip = buildingCD61.getLocationZip();
 
 // push data to campusData
-campusData.push(CD61name + " " + CD61code + "<br>" + CD61desc);
+campusData.push(CD61name + " " + CD61code);
 
 // polygon click function
 function onClickCD61(e) {
@@ -585,7 +570,7 @@ let DL45state = buildingDL45.getLocationState();
 let DL45zip = buildingDL45.getLocationZip();
 
 // push data to campusData
-campusData.push(DL45name + " " + DL45code + "<br>" + DL45desc);
+campusData.push(DL45name + " " + DL45code);
 
 // polygon click function
 function onClickDL45(e) {
@@ -647,7 +632,7 @@ let DO55state = buildingDO55.getLocationState();
 let DO55zip = buildingDO55.getLocationZip();
 
 // push data to campusData
-campusData.push(DO55name + " " + DO55code + "<br>" + DO55desc);
+campusData.push(DO55name + " " + DO55code);
 
 // polygon click function
 function onClickDO55(e) {
@@ -710,7 +695,7 @@ let FO36state = buildingFO36.getLocationState();
 let FO36zip = buildingFO36.getLocationZip();
 
 // push data to campusData
-campusData.push(FO36name + " " + FO36code + "<br>" + FO36desc);
+campusData.push(FO36name + " " + FO36code);
 
 // polygon click function
 function onClickFO36(e) {
@@ -773,7 +758,7 @@ let SC23state = buildingSC23.getLocationState();
 let SC23zip = buildingSC23.getLocationZip();
 
 // push data to campusData
-campusData.push(SC23name + " " + SC23code + "<br>" + SC23desc);
+campusData.push(SC23name + " " + SC23code);
 
 // polygon click function
 function onClickSC23(e) {
@@ -836,7 +821,7 @@ let MC11state = buildingMC11.getLocationState();
 let MC11zip = buildingMC11.getLocationZip();
 
 // push data to campusData
-campusData.push(MC11name + " " + MC11code + "<br>" + MC11desc);
+campusData.push(MC11name + " " + MC11code);
 
 // polygon click function
 function onClickMC11(e) {
@@ -899,7 +884,7 @@ let MT56state = buildingMT56.getLocationState();
 let MT56zip = buildingMT56.getLocationZip();
 
 // push data to campusData
-campusData.push(MT56name + " " + MT56code + "<br>" + MT56desc);
+campusData.push(MT56name + " " + MT56code);
 
 // polygon click function
 function onClickMT56(e) {
@@ -962,7 +947,7 @@ let NO39state = buildingNO39.getLocationState();
 let NO39zip = buildingNO39.getLocationZip();
 
 // push data to campusData
-campusData.push(NO39name + " " + NO39code + "<br>" + NO39desc);
+campusData.push(NO39name + " " + NO39code);
 
 // polygon click function
 function onClickNO39(e) {
@@ -1025,7 +1010,7 @@ let JP58state = buildingJP58.getLocationState();
 let JP58zip = buildingJP58.getLocationZip();
 
 // push data to campusData
-campusData.push(JP58name + " " + JP58code + "<br>" + JP58desc);
+campusData.push(JP58name + " " + JP58code);
 
 // polygon click function
 function onClickJP58(e) {
@@ -1088,7 +1073,7 @@ let PH51state = buildingPH51.getLocationState();
 let PH51zip = buildingPH51.getLocationZip();
 
 // push data to campusData
-campusData.push(PH51name + " " + PH51code + "<br>" + PH51desc);
+campusData.push(PH51name + " " + PH51code);
 
 // polygon click function
 function onClickPH51(e) {
@@ -1151,7 +1136,7 @@ let RY59state = buildingRY59.getLocationState();
 let RY59zip = buildingRY59.getLocationZip();
 
 // push data to campusData
-campusData.push(RY59name + " " + RY59code + "<br>" + RY59desc);
+campusData.push(RY59name + " " + RY59code);
 
 // polygon click function
 function onClickRY59(e) {
@@ -1213,7 +1198,7 @@ let SL26state = buildingSL26.getLocationState();
 let SL26zip = buildingSL26.getLocationZip();
 
 // push data to campusData
-campusData.push(SL26name + " " + SL26code + "<br>" + SL26desc);
+campusData.push(SL26name + " " + SL26code);
 
 // polygon click function
 function onClickSL26(e) {
@@ -1275,7 +1260,7 @@ let SH49state = buildingSH49.getLocationState();
 let SH49zip = buildingSH49.getLocationZip();
 
 // push data to campusData
-campusData.push(SH49name + " " + SH49code + "<br>" + SH49desc);
+campusData.push(SH49name + " " + SH49code);
 
 // polygon click function
 function onClickSH49(e) {
