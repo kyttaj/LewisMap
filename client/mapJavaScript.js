@@ -1514,7 +1514,7 @@ function onMapClick(e) {
     document.getElementById("buildingName").innerHTML = "<b>Lewis University Campus</b>";
     document.getElementById("buildingMapCode").innerHTML = " ";
     document.getElementById("buildingHyperlink").innerHTML = "<a href=https://lewisu.edu/index.htm target= '_blank'>Lewis University Website</a>";
-    document.getElementById("buildingDescription").innerHTML = "<a href=https://www.lewisu.edu/campuses/oakbrook/index.htm target= '_blank'>Lewis University at Oak Brook</a>";
+    document.getElementById("buildingDescription").innerHTML = "Lewis University at Oak Brook";
     document.getElementById("buildingCityState").innerHTML = text;
     document.getElementById("buildingRooms").innerHTML = "";
     return;
