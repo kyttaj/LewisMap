@@ -1426,6 +1426,78 @@ function onClickSA31(e) {
 }
 polygon.on('click', onClickSA31);
 
+// Areas
+// new building
+BuildingClass.include({
+    // add properties
+    BuildingLewisMapCode: "A20",
+    BuildingName: "Lewis University Airport",
+    JsonCoordinatesArray: [[41.605192, -88.092472],[41.605003, -88.091984],[41.605076, -88.091936],[41.605039, -88.091834],[41.604614, -88.092129],[41.604915, -88.09288],[41.605132, -88.092724],[41.605076, -88.092563]],
+    BuildingDescription: "Lewis University Airport is a public use airport located 20 miles southwest of Chicago, in the village of Romeoville in Will County, Illinois, United States. The Joliet Regional Port District assumed ownership of the airport in 1989. The National Weather Service Chicago, Illinois is adjacent to the airport. Wikipedia",
+    BuildingHyperlink: "http://www.flylot.com",
+    LocationLatitude: 41.605516,
+    LocationLongitude: -88.08014,
+    LocationAddressNumber: 1,
+    LocationAddress: "George J Michas Dr",
+    LocationAddress2: "",
+    LocationCity: "Romeoville",
+    LocationState: "IL",
+    LocationZip: 60466,
+    LocationPhone: 0,
+    LocationClosed: false,
+    LocationDescription: "",
+    LocationHyperlink: "",
+    Rooms: [[""]],
+});
+
+// buildingA20 object
+let buildingA20 = new BuildingClass();
+// add object to buildings array
+buildings.push(buildingA20);
+
+// Building Vectors
+// create A20 polygon
+let A20 = [buildingA20.JsonCoordinatesArray];
+
+// A20 polygon properties and popup
+polygon = L.polygon(A20, { color: 'green', fillOpacity: .7, weight: 1, id: "polygonSA31" }).addTo(vectorLayer);
+polygon.bindPopup('<b>' + buildingA20.getBuildingName() + '</b><br>Building: ' + buildingA20.BuildingLewisMapCode);
+popup = L.popup();
+
+// building variables
+let A20name = buildingSA31.getBuildingName();
+let A20code = buildingSA31.getBuildingLewisMapCode();
+let A20link = buildingSA31.getBuildingHyperlink();
+let A20desc = buildingSA31.getBuildingDescription();
+let A20city = buildingSA31.getLocationCity();
+let A20state = buildingSA31.getLocationState();
+let A20zip = buildingSA31.getLocationZip();
+let A20rooms = buildingSA31.getRooms();
+
+// push data to campusData
+campusData.push(A20name + " " + A20code);
+
+// polygon click function
+function onClickA20(e) {
+    if (!document.getElementById) return;
+    let fLen = A20rooms.length;
+    A20rooms.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + A20rooms[i] + "</li>";
+    }
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + A20name;
+    document.getElementById("buildingName").innerHTML = "<b>" + A20name + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + A20code;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + A20link + " target= '_blank'>" + A20name + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = A20desc;
+    document.getElementById("buildingCityState").innerHTML = A20city + ", " + A20state + "  " + A20zip;
+    document.getElementById("buildingRooms").innerHTML = text;
+    return;
+}
+polygon.on('click', onClickA20);
+
 
 // Campus search on map click
 function onMapClick(e) {
@@ -1442,7 +1514,7 @@ function onMapClick(e) {
     document.getElementById("buildingName").innerHTML = "<b>Lewis University Campus</b>";
     document.getElementById("buildingMapCode").innerHTML = " ";
     document.getElementById("buildingHyperlink").innerHTML = "<a href=https://lewisu.edu/index.htm target= '_blank'>Lewis University Website</a>";
-    document.getElementById("buildingDescription").innerHTML = "description";
+    document.getElementById("buildingDescription").innerHTML = "<a href=https://www.lewisu.edu/campuses/oakbrook/index.htm target= '_blank'>Lewis University at Oak Brook</a>";
     document.getElementById("buildingCityState").innerHTML = text;
     document.getElementById("buildingRooms").innerHTML = "";
     return;
