@@ -1537,8 +1537,8 @@ let coffeeIcon = L.icon({
 });
 
 // placing coffee marker
-/*
+
 let marker;
 marker = L.marker([41.602504, -88.080721], {icon: coffeeIcon}).addTo(map);
 marker.bindPopup("<b>Courtyard Café</b><br>Bldg. DL45<br><a href='https://content-service.sodexomyway.com/media/NEWStarbucksMenu8.15.22_tcm82-155876.pdf?url=https://lewisu.sodexomyway.com/' target='_blank'>menu</a>");
-popup = L.popup();*/
+popup = L.popup();

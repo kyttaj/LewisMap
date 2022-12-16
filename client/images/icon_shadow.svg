@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1035.31 978.327" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(0.999967 0.00809742 -0.00809742 0.999967 23.1111 16.1429)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="16.9338" x2="500.329" y1="323.947" y2="886.522">
+<stop offset="0" stop-color="#1f1e1e" stop-opacity="0.727896"/>
+<stop offset="1" stop-color="#000000"/>
+</linearGradient>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="892.585" id="Filter" width="748.414" x="-40.6782" y="92.0035">
+<feGaussianBlur in="SourceGraphic" result="Blur" stdDeviation="30.3309"/>
+</filter>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="978.327" width="1035.31" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M47.7188 524.346C-53.0061 346.125 481.658 43.9498 582.382 222.171C716.682 459.799 537.743 904.48 515.387 908.676C493.03 912.872 182.018 761.974 47.7188 524.346Z" fill="url(#LinearGradient)" fill-rule="nonzero" filter="url(#Filter)" opacity="0.461721" stroke="none"/>
+<path d="M160 240C160 26.6667 800 26.6667 800 240C800 524.444 515.556 880 491.852 880C468.148 880 160 524.444 160 240Z" fill="#68c40c" fill-rule="nonzero" opacity="0" stroke="#881c33" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"/>
+<path d="M612.089 207.08L676.089 207.08C684.926 207.08 692.089 214.243 692.089 223.08L692.089 257.08C692.089 282.485 671.494 303.08 646.089 303.08L612.089 303.08M341.826 206.627L613.826 206.627L613.826 398.627C613.826 442.809 578.009 478.627 533.826 478.627L421.826 478.627C377.643 478.627 341.826 442.809 341.826 398.627L341.826 206.627L341.826 206.627ZM308.089 543.08L644.089 543.08" fill="#881c33" fill-rule="nonzero" opacity="0" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+</g>
+</svg>
