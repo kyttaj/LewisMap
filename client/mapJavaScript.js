@@ -315,7 +315,7 @@ let AS12 = [buildingAS12.JsonCoordinatesArray];
 
 // AS12 polygon properties and popup
 polygon = L.polygon(AS12, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
-polygon.bindPopup('<b>' + buildingAS12.getBuildingName() + '</b><br>Building: ' + buildingAS12.BuildingLewisMapCode + "<br>" + "<a href=" + buildingAS12.BuildingHyperlink + " target= '_blank'>Science Center Website</a>");
+polygon.bindPopup('<b>' + buildingAS12.getBuildingName() + '</b><br>Building: ' + buildingAS12.BuildingLewisMapCode + '<br>' + "<a href=" + buildingAS12.BuildingHyperlink + " target= '_blank'>Science Center Website</a>" + '<p align="center"><a href="images/IMG_0926.jpg" target= "_blank"><img src="images/IMG_0926.jpg" style="width:128px;"></a></p>');
 popup = L.popup();
 
 // building variables
