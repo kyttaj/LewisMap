@@ -83,6 +83,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [["First Floor &emsp; Art and Design"],["First Floor &emsp; Caterpillar Gallery"],["First Floor &emsp; Philip Lynch Theatre"],["First Floor &emsp; Wadsworth Family Gallery"]],
 
     // Methods
     getBuildingLewisMapCode: function () {return this.BuildingLewisMapCode},
@@ -102,6 +103,7 @@ BuildingClass.include({
     getLocationClosed: function () {return this.LocationClosed},
     getLocationDescription: function () {return this.LocationDescription},
     getLocationHyperlink: function () {return this.LocationHyperlink},
+    getRooms: function () {return this.Rooms},
     toString: function () {return this.BuildingName + "<br>" + this.BuildingLewisMapCode + "<br>" + this.BuildingDescription + "<br>" + this.BuildingHyperlink},
 });
 
@@ -127,6 +129,7 @@ let FA18desc = buildingFA18.getBuildingDescription();
 let FA18city = buildingFA18.getLocationCity();
 let FA18state = buildingFA18.getLocationState();
 let FA18zip = buildingFA18.getLocationZip();
+let FA18rooms = buildingFA18.getRooms();
 
 // push data to campusData
 campusData.push(FA18name + " " + FA18code);
@@ -134,12 +137,20 @@ campusData.push(FA18name + " " + FA18code);
 // polygon click function
 function onClickFA18(e) {
     if (!document.getElementById) return;
+    let fLen = FA18rooms.length;
+    FA18rooms.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + FA18rooms[i] + "</li>";
+    }
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + FA18name;
     document.getElementById("buildingName").innerHTML = "<b>" + FA18name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + FA18code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + FA18link + " target= '_blank'>" + FA18name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = FA18desc;
     document.getElementById("buildingCityState").innerHTML = FA18city + ", " + FA18state + "  " + FA18zip;
+    document.getElementById("buildingRooms").innerHTML = text;
     return;
 }
 polygon.on('click', onClickFA18);
@@ -165,7 +176,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-    LocationKeywords: [[""]],
+    Rooms: [[""]],
 
 });
 
@@ -191,6 +202,7 @@ let SU15desc = buildingSU15.getBuildingDescription();
 let SU15city = buildingSU15.getLocationCity();
 let SU15state = buildingSU15.getLocationState();
 let SU15zip = buildingSU15.getLocationZip();
+let SU15rooms = buildingSU15.getRooms();
 
 // push data to campusData
 campusData.push(SU15name + " " + SU15code);
@@ -201,9 +213,10 @@ function onClickSU15(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + SU15name;
     document.getElementById("buildingName").innerHTML = "<b>" + SU15name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + SU15code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SU15link + " target= '_blank'>" + SU15name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = SU15desc;
     document.getElementById("buildingCityState").innerHTML = SU15city + ", " + SU15state + "  " + SU15zip;
+    document.getElementById("buildingRooms").innerHTML = SU15rooms;
     return;
 }
 polygon.on('click', onClickSU15);
@@ -229,6 +242,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "Shipping/Receiving",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -254,6 +268,7 @@ let SR1312desc = buildingSR1312.getBuildingDescription();
 let SR1312city = buildingSR1312.getLocationCity();
 let SR1312state = buildingSR1312.getLocationState();
 let SR1312zip = buildingSR1312.getLocationZip();
+let SR1312rooms = buildingSR1312.getRooms();
 
 // push data to campusData
 campusData.push(SR1312name + " " + SR1312code);
@@ -264,9 +279,10 @@ function onClickSR1312(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + SR1312name;
     document.getElementById("buildingName").innerHTML = "<b>" + SR1312name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + SR1312code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SR1312link + " target= '_blank'>" + SR1312name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = SR1312desc;
     document.getElementById("buildingCityState").innerHTML = SR1312city + ", " + SR1312state + "  " + SR1312zip;
+    document.getElementById("buildingRooms").innerHTML = SR1312rooms;
     return;
 }
 polygon.on('click', onClickSR1312);
@@ -292,6 +308,13 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [["Lower Level &emsp; CLASSROOM &emsp; AS-030-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-032-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-036-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-058-S"]
+    ,["Lower Level &emsp; CLASSROOM &emsp; AS-060-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-054-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-052-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-018-S"]
+    ,["Lower Level &emsp; CLASSROOM &emsp; AS-024-S"],["Lower Level &emsp; CLASSROOM &emsp; AS-019-S"],["Lower Level &emsp; GREENHOUSE &emsp; AS-028A-S"],["Lower Level &emsp; MECHANICAL EQUIPMENT ROOM &emsp; AS-056-S"]
+    ,["Lower Level &emsp; PREP ROOM &emsp; AS-020-S"],["Lower Level &emsp; COLLABORATION &emsp; AS-026-S"],["Lower Level &emsp; WOMEN &emsp; AS-038-S"],["Lower Level &emsp; MEN &emsp; AS-040-S"],["Lower Level &emsp; LAN &emsp; AS-051-S"]
+    ,["Lower Level &emsp; OFFICE &emsp; AS-057-S"],["Lower Level &emsp; OFFICE &emsp; AS-059-S"],["Lower Level &emsp; OFFICE &emsp; AS-053-S"],["Lower Level &emsp; OFFICE &emsp; AS-055-S"],["Lower Level &emsp; Physics"]
+    ,["Lower Level &emsp; Greenhouse"],["Ground Level &emsp; Engineering, Computing and Mathematical Sciences"],["Ground Level &emsp; Cadaver Lab"],["Ground Level &emsp; Likens Virtual Reality Lab"]
+    ,["Ground Level &emsp; Dean, Aviation, Science and Technology"],["Ground Level &emsp; Charlie’s Place"],["Upper Level &emsp; Biology"]],
 
 });
 
@@ -317,6 +340,7 @@ let AS12desc = buildingAS12.getBuildingDescription();
 let AS12city = buildingAS12.getLocationCity();
 let AS12state = buildingAS12.getLocationState();
 let AS12zip = buildingAS12.getLocationZip();
+let AS12rooms = buildingAS12.getRooms();
 
 // push data to campusData
 campusData.push(AS12name + " " + AS12code);
@@ -324,12 +348,20 @@ campusData.push(AS12name + " " + AS12code);
 // polygon click function
 function onClickAS12(e) {
     if (!document.getElementById) return;
+    let fLen = AS12rooms.length;
+    AS12rooms.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + AS12rooms[i] + "</li>";
+    }
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + AS12name;
     document.getElementById("buildingName").innerHTML = "<b>" + AS12name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + AS12code;
     document.getElementById("buildingHyperlink").innerHTML = "<a href=" + AS12link + " target= '_blank'>" + AS12name + " Website</a>";
     document.getElementById("buildingDescription").innerHTML = AS12desc;
     document.getElementById("buildingCityState").innerHTML = AS12city + ", " + AS12state + "  " + AS12zip;
+    document.getElementById("buildingRooms").innerHTML = text;
     return;
 }
 polygon.on('click', onClickAS12);
@@ -355,6 +387,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -380,6 +413,7 @@ let BE43desc = buildingBE43.getBuildingDescription();
 let BE43city = buildingBE43.getLocationCity();
 let BE43state = buildingBE43.getLocationState();
 let BE43zip = buildingBE43.getLocationZip();
+let BE43rooms = buildingBE43.getRooms();
 
 // push data to campusData
 campusData.push(BE43name + " " + BE43code);
@@ -390,9 +424,10 @@ function onClickBE43(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + BE43name;
     document.getElementById("buildingName").innerHTML = "<b>" + BE43name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + BE43code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + BE43link + " target= '_blank'>" + BE43name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = BE43desc;
     document.getElementById("buildingCityState").innerHTML = BE43city + ", " + BE43state + "  " + BE43zip;
+    document.getElementById("buildingRooms").innerHTML = BE43rooms;
     return;
 }
 polygon.on('click', onClickBE43);
@@ -418,6 +453,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -442,6 +478,7 @@ let LR33desc = buildingLR33.getBuildingDescription();
 let LR33city = buildingLR33.getLocationCity();
 let LR33state = buildingLR33.getLocationState();
 let LR33zip = buildingLR33.getLocationZip();
+let LR33rooms = buildingLR33.getRooms();
 
 // push data to campusData
 campusData.push(LR33name + " " + LR33code);
@@ -452,9 +489,10 @@ function onClickLR33(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + LR33name;
     document.getElementById("buildingName").innerHTML = "<b>" + LR33name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + LR33code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + LR33link + " target= '_blank'>" + LR33name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = LR33desc;
     document.getElementById("buildingCityState").innerHTML = LR33city + ", " + LR33state + "  " + LR33zip;
+    document.getElementById("buildingRooms").innerHTML = LR33rooms;
     return;
 }
 polygon.on('click', onClickLR33);
@@ -480,6 +518,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -505,6 +544,7 @@ let CD61desc = buildingCD61.getBuildingDescription();
 let CD61city = buildingCD61.getLocationCity();
 let CD61state = buildingCD61.getLocationState();
 let CD61zip = buildingCD61.getLocationZip();
+let CD61rooms = buildingCD61.getRooms();
 
 // push data to campusData
 campusData.push(CD61name + " " + CD61code);
@@ -515,9 +555,10 @@ function onClickCD61(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + CD61name;
     document.getElementById("buildingName").innerHTML = "<b>" + CD61name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + CD61code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + CD61link + " target= '_blank'>" + CD61name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = CD61desc;
     document.getElementById("buildingCityState").innerHTML = CD61city + ", " + CD61state + "  " + CD61zip;
+    document.getElementById("buildingRooms").innerHTML = CD61rooms;
     return;
 }
 polygon.on('click', onClickCD61);
@@ -543,6 +584,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: ["First Floor &emsp; Mailroom"],
 
 });
 
@@ -568,6 +610,7 @@ let DL45desc = buildingDL45.getBuildingDescription();
 let DL45city = buildingDL45.getLocationCity();
 let DL45state = buildingDL45.getLocationState();
 let DL45zip = buildingDL45.getLocationZip();
+let DL45rooms = buildingDL45.getRooms();
 
 // push data to campusData
 campusData.push(DL45name + " " + DL45code);
@@ -575,12 +618,20 @@ campusData.push(DL45name + " " + DL45code);
 // polygon click function
 function onClickDL45(e) {
     if (!document.getElementById) return;
+    let fLen = DL45rooms.length;
+    DL45rooms.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + DL45rooms[i] + "</li>";
+    }
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + DL45name;
     document.getElementById("buildingName").innerHTML = "<b>" + DL45name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + DL45code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + DL45link + " target= '_blank'>" + DL45name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = DL45desc;
     document.getElementById("buildingCityState").innerHTML = DL45city + ", " + DL45state + "  " + DL45zip;
+    document.getElementById("buildingRooms").innerHTML = text;
     return;
 }
 polygon.on('click', onClickDL45);
@@ -605,6 +656,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -630,6 +682,7 @@ let DO55desc = buildingDO55.getBuildingDescription();
 let DO55city = buildingDO55.getLocationCity();
 let DO55state = buildingDO55.getLocationState();
 let DO55zip = buildingDO55.getLocationZip();
+let DO55rooms = buildingDO55.getRooms();
 
 // push data to campusData
 campusData.push(DO55name + " " + DO55code);
@@ -640,9 +693,10 @@ function onClickDO55(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + DO55name;
     document.getElementById("buildingName").innerHTML = "<b>" + DO55name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + DO55code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + DO55link + " target= '_blank'>" + DO55name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = DO55desc;
     document.getElementById("buildingCityState").innerHTML = DO55city + ", " + DO55state + "  " + DO55zip;
+    document.getElementById("buildingRooms").innerHTML = DO55rooms;
     return;
 }
 polygon.on('click', onClickDO55);
@@ -668,6 +722,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
+    Rooms: [[""]],
 
 });
 
@@ -693,6 +748,7 @@ let FO36desc = buildingFO36.getBuildingDescription();
 let FO36city = buildingFO36.getLocationCity();
 let FO36state = buildingFO36.getLocationState();
 let FO36zip = buildingFO36.getLocationZip();
+let FO36rooms = buildingFO36.getRooms();
 
 // push data to campusData
 campusData.push(FO36name + " " + FO36code);
@@ -703,9 +759,10 @@ function onClickFO36(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + FO36name;
     document.getElementById("buildingName").innerHTML = "<b>" + FO36name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + FO36code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + FO36link + " target= '_blank'>" + FO36name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = FO36desc;
     document.getElementById("buildingCityState").innerHTML = FO36city + ", " + FO36state + "  " + FO36zip;
+    document.getElementById("buildingRooms").innerHTML = FO36rooms;
     return;
 }
 polygon.on('click', onClickFO36);
@@ -731,7 +788,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingSC23 object
@@ -756,6 +813,7 @@ let SC23desc = buildingSC23.getBuildingDescription();
 let SC23city = buildingSC23.getLocationCity();
 let SC23state = buildingSC23.getLocationState();
 let SC23zip = buildingSC23.getLocationZip();
+let SC23rooms = buildingSC23.getRooms();
 
 // push data to campusData
 campusData.push(SC23name + " " + SC23code);
@@ -766,9 +824,10 @@ function onClickSC23(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + SC23name;
     document.getElementById("buildingName").innerHTML = "<b>" + SC23name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + SC23code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SC23link + " target= '_blank'>" + SC23name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = SC23desc;
     document.getElementById("buildingCityState").innerHTML = SC23city + ", " + SC23state + "  " + SC23zip;
+    document.getElementById("buildingRooms").innerHTML = SC23rooms;
     return;
 }
 polygon.on('click', onClickSC23);
@@ -794,7 +853,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingMC11 object
@@ -819,6 +878,7 @@ let MC11desc = buildingMC11.getBuildingDescription();
 let MC11city = buildingMC11.getLocationCity();
 let MC11state = buildingMC11.getLocationState();
 let MC11zip = buildingMC11.getLocationZip();
+let MC11rooms = buildingMC11.getRooms();
 
 // push data to campusData
 campusData.push(MC11name + " " + MC11code);
@@ -829,9 +889,10 @@ function onClickMC11(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + MC11name;
     document.getElementById("buildingName").innerHTML = "<b>" + MC11name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + MC11code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + MC11link + " target= '_blank'>" + MC11name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = MC11desc;
     document.getElementById("buildingCityState").innerHTML = MC11city + ", " + MC11state + "  " + MC11zip;
+    document.getElementById("buildingRooms").innerHTML = MC11rooms;
     return;
 }
 polygon.on('click', onClickMC11);
@@ -857,7 +918,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingMT56 object
@@ -882,6 +943,7 @@ let MT56desc = buildingMT56.getBuildingDescription();
 let MT56city = buildingMT56.getLocationCity();
 let MT56state = buildingMT56.getLocationState();
 let MT56zip = buildingMT56.getLocationZip();
+let MT56rooms = buildingMC11.getRooms();
 
 // push data to campusData
 campusData.push(MT56name + " " + MT56code);
@@ -892,9 +954,10 @@ function onClickMT56(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + MT56name;
     document.getElementById("buildingName").innerHTML = "<b>" + MT56name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + MT56code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + MT56link + " target= '_blank'>" + MT56name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = MT56desc;
     document.getElementById("buildingCityState").innerHTML = MT56city + ", " + MT56state + "  " + MT56zip;
+    document.getElementById("buildingRooms").innerHTML = MT56rooms;
     return;
 }
 polygon.on('click', onClickMT56);
@@ -920,7 +983,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingNO39 object
@@ -945,6 +1008,7 @@ let NO39desc = buildingNO39.getBuildingDescription();
 let NO39city = buildingNO39.getLocationCity();
 let NO39state = buildingNO39.getLocationState();
 let NO39zip = buildingNO39.getLocationZip();
+let NO39rooms = buildingNO39.getRooms();
 
 // push data to campusData
 campusData.push(NO39name + " " + NO39code);
@@ -955,9 +1019,10 @@ function onClickNO39(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + NO39name;
     document.getElementById("buildingName").innerHTML = "<b>" + NO39name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + NO39code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + NO39link + " target= '_blank'>" + NO39name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = NO39desc;
     document.getElementById("buildingCityState").innerHTML = NO39city + ", " + NO39state + "  " + NO39zip;
+    document.getElementById("buildingRooms").innerHTML = NO39rooms;
     return;
 }
 polygon.on('click', onClickNO39);
@@ -983,7 +1048,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingJP58 object
@@ -1008,6 +1073,7 @@ let JP58desc = buildingJP58.getBuildingDescription();
 let JP58city = buildingJP58.getLocationCity();
 let JP58state = buildingJP58.getLocationState();
 let JP58zip = buildingJP58.getLocationZip();
+let JP58rooms = buildingJP58.getRooms();
 
 // push data to campusData
 campusData.push(JP58name + " " + JP58code);
@@ -1018,9 +1084,10 @@ function onClickJP58(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + JP58name;
     document.getElementById("buildingName").innerHTML = "<b>" + JP58name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + JP58code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + JP58link + " target= '_blank'>" + JP58name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = JP58desc;
     document.getElementById("buildingCityState").innerHTML = JP58city + ", " + JP58state + "  " + JP58zip;
+    document.getElementById("buildingRooms").innerHTML = JP58rooms;
     return;
 }
 polygon.on('click', onClickJP58);
@@ -1046,7 +1113,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingPH51 object
@@ -1071,6 +1138,7 @@ let PH51desc = buildingPH51.getBuildingDescription();
 let PH51city = buildingPH51.getLocationCity();
 let PH51state = buildingPH51.getLocationState();
 let PH51zip = buildingPH51.getLocationZip();
+let PH51rooms = buildingPH51.getRooms();
 
 // push data to campusData
 campusData.push(PH51name + " " + PH51code);
@@ -1081,9 +1149,10 @@ function onClickPH51(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + PH51name;
     document.getElementById("buildingName").innerHTML = "<b>" + PH51name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + JP58code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + PH51link + " target= '_blank'>" + PH51name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = PH51desc;
     document.getElementById("buildingCityState").innerHTML = PH51city + ", " + PH51state + "  " + PH51zip;
+    document.getElementById("buildingRooms").innerHTML = PH51rooms;
     return;
 }
 polygon.on('click', onClickPH51);
@@ -1109,7 +1178,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingRY59 object
@@ -1134,6 +1203,7 @@ let RY59desc = buildingRY59.getBuildingDescription();
 let RY59city = buildingRY59.getLocationCity();
 let RY59state = buildingRY59.getLocationState();
 let RY59zip = buildingRY59.getLocationZip();
+let RY59rooms = buildingRY59.getRooms();
 
 // push data to campusData
 campusData.push(RY59name + " " + RY59code);
@@ -1144,9 +1214,10 @@ function onClickRY59(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + RY59name;
     document.getElementById("buildingName").innerHTML = "<b>" + RY59name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + RY59code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + RY59link + " target= '_blank'>" + RY59name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = RY59desc;
     document.getElementById("buildingCityState").innerHTML = RY59city + ", " + RY59state + "  " + RY59zip;
+    document.getElementById("buildingRooms").innerHTML = RY59rooms;
     return;
 }
 polygon.on('click', onClickRY59);
@@ -1171,7 +1242,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingSL26 object
@@ -1196,6 +1267,7 @@ let SL26desc = buildingSL26.getBuildingDescription();
 let SL26city = buildingSL26.getLocationCity();
 let SL26state = buildingSL26.getLocationState();
 let SL26zip = buildingSL26.getLocationZip();
+let SL26rooms = buildingSL26.getRooms();
 
 // push data to campusData
 campusData.push(SL26name + " " + SL26code);
@@ -1206,9 +1278,10 @@ function onClickSL26(e) {
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + SL26name;
     document.getElementById("buildingName").innerHTML = "<b>" + SL26name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + SL26code;
-    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SL26link + " target= '_blank'>" + SL26name + " Website</a>";
+    document.getElementById("buildingHyperlink").innerHTML = "";
     document.getElementById("buildingDescription").innerHTML = SL26desc;
     document.getElementById("buildingCityState").innerHTML = SL26city + ", " + SL26state + "  " + SL26zip;
+    document.getElementById("buildingRooms").innerHTML = SL26rooms;
     return;
 }
 polygon.on('click', onClickSL26);
@@ -1233,7 +1306,7 @@ BuildingClass.include({
     LocationClosed: false,
     LocationDescription: "",
     LocationHyperlink: "",
-
+    Rooms: [[""]],
 });
 
 // buildingSH49 object
@@ -1258,6 +1331,7 @@ let SH49desc = buildingSH49.getBuildingDescription();
 let SH49city = buildingSH49.getLocationCity();
 let SH49state = buildingSH49.getLocationState();
 let SH49zip = buildingSH49.getLocationZip();
+let SH49rooms = buildingSH49.getRooms();
 
 // push data to campusData
 campusData.push(SH49name + " " + SH49code);
@@ -1265,16 +1339,92 @@ campusData.push(SH49name + " " + SH49code);
 // polygon click function
 function onClickSH49(e) {
     if (!document.getElementById) return;
-    let bldg = buildingFA18;
     document.getElementById("searchFeedback").innerHTML = "Search Building: " + SH49name;
     document.getElementById("buildingName").innerHTML = "<b>" + SH49name + "</b>";
     document.getElementById("buildingMapCode").innerHTML = "Building: " + SH49code;
     document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SH49link + " target= '_blank'>" + SH49name + " Website</a>";
     document.getElementById("buildingDescription").innerHTML = SH49desc;
     document.getElementById("buildingCityState").innerHTML = SH49city + ", " + SH49state + "  " + SH49zip;
+    document.getElementById("buildingRooms").innerHTML = SH49rooms;
     return;
 }
 polygon.on('click', onClickSH49);
+
+
+// new building
+BuildingClass.include({
+    // add properties
+    BuildingLewisMapCode: "SA31",
+    BuildingName: "Sancta Alberta Chapel",
+    JsonCoordinatesArray: [[41.605516, -88.08014], [41.605524, -88.079824],[41.605548, -88.079824],[41.605558, -88.079577],[41.605322, -88.079564],[41.605318, -88.079615],[41.605241, -88.079617],[41.605233, -88.079676],[41.605141, -88.079674],[41.605131, -88.079982],[41.605288, -88.079993],[41.605292, -88.079972],[41.605368, -88.07998],[41.605366, -88.080135]],
+    BuildingDescription: "University Ministry is located at the center of the Romeoville campus. The main entrance is across from the LRC under the red awning. Come explore and say hello!</p><p>Head up the stairs on your right to the Student Lounge. It’s a bit of a maze in this older section of the building, known as the Miguel Center, but you’ll make your way around the Victoria LaGrippe Meditation Garden (courtyard of building) to the Sancta Alberta Chapel.</p><p>The James A. LaGrippe Pastoral Center is adjacent to the Chapel and houses the D’Arcy Great Room and Lewis Family Room.",
+    BuildingHyperlink: "https://www.lewisu.edu/studentservices/ministry/theplace.htm",
+    LocationLatitude: 41.605516,
+    LocationLongitude: -88.08014,
+    LocationAddressNumber: 0,
+    LocationAddress: "",
+    LocationAddress2: "",
+    LocationCity: "Romeoville",
+    LocationState: "IL",
+    LocationZip: 60466,
+    LocationPhone: 0,
+    LocationClosed: false,
+    LocationDescription: "",
+    LocationHyperlink: "",
+    Rooms: [["First Floor &emsp; Student Lounge &emsp; 1"],["First Floor &emsp; Study Room &emsp; 2"],["First Floor &emsp; Office of Nia White, Coordinator of Peer Ministry and Service &emsp; 3"]
+    ,["First Floor &emsp; Office of Fr. Dennis Lewandowski, University Chaplain &emsp; 4"],["First Floor &emsp; Living Room &emsp; 5"],["First Floor &emsp; Office of Margaret Martinez, Director of Mission and Ministry &emsp; 6"]
+    ,["First Floor &emsp; Office of Venus Wozniak, Associate Director of Mission and Ministry &emsp; 7"],["Lower Level &emsp; Multi-Faith Prayer & Meditation Room &emsp; 8"],["Lower Level &emsp; Food Pantry &emsp; 9"]
+    ,["First Floor &emsp; Sancta Alberta Chapel"],["First Floor &emsp; Kitchen"],["First Floor &emsp; DArcy Great Room"],["First Floor &emsp; Lewis Family Room"],["First Floor &emsp; Mens Restroom"]
+    ,["First Floor &emsp; Womens Restroom"]],
+});
+
+// buildingSH49 object
+let buildingSA31 = new BuildingClass();
+// add object to buildings array
+buildings.push(buildingSA31);
+
+// Building Vectors
+// create SH49 polygon
+let SA31 = [buildingSA31.JsonCoordinatesArray];
+
+// SA31 polygon properties and popup
+polygon = L.polygon(SA31, { color: 'green', fillOpacity: .7, weight: 1, id: "polygonSA31" }).addTo(vectorLayer);
+polygon.bindPopup('<b>' + buildingSA31.getBuildingName() + '</b><br>Building: ' + buildingSA31.BuildingLewisMapCode);
+popup = L.popup();
+
+// building variables
+let SA31name = buildingSA31.getBuildingName();
+let SA31code = buildingSA31.getBuildingLewisMapCode();
+let SA31link = buildingSA31.getBuildingHyperlink();
+let SA31desc = buildingSA31.getBuildingDescription();
+let SA31city = buildingSA31.getLocationCity();
+let SA31state = buildingSA31.getLocationState();
+let SA31zip = buildingSA31.getLocationZip();
+let SA31rooms = buildingSA31.getRooms();
+
+// push data to campusData
+campusData.push(SA31name + " " + SA31code);
+
+// polygon click function
+function onClickSA31(e) {
+    if (!document.getElementById) return;
+    let fLen = SA31rooms.length;
+    SA31rooms.sort();
+
+    let text = "<ul>";
+    for (let i = 0; i < fLen; i++) {
+    text += "<li>" + SA31rooms[i] + "</li>";
+    }
+    document.getElementById("searchFeedback").innerHTML = "Search Building: " + SA31name;
+    document.getElementById("buildingName").innerHTML = "<b>" + SA31name + "</b>";
+    document.getElementById("buildingMapCode").innerHTML = "Building: " + SA31code;
+    document.getElementById("buildingHyperlink").innerHTML = "<a href=" + SA31link + " target= '_blank'>" + SA31name + " Website</a>";
+    document.getElementById("buildingDescription").innerHTML = SA31desc;
+    document.getElementById("buildingCityState").innerHTML = SA31city + ", " + SA31state + "  " + SA31zip;
+    document.getElementById("buildingRooms").innerHTML = text;
+    return;
+}
+polygon.on('click', onClickSA31);
 
 
 // Campus search on map click
@@ -1294,6 +1444,7 @@ function onMapClick(e) {
     document.getElementById("buildingHyperlink").innerHTML = "<a href=https://lewisu.edu/index.htm target= '_blank'>Lewis University Website</a>";
     document.getElementById("buildingDescription").innerHTML = "description";
     document.getElementById("buildingCityState").innerHTML = text;
+    document.getElementById("buildingRooms").innerHTML = "";
     return;
 }
 map.on('click', onMapClick);
