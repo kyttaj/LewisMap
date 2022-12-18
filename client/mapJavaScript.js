@@ -1540,7 +1540,7 @@ let coffeeIcon = L.icon({
 // coffee click function
 document
     .getElementById("searchBox")
-    .addEventListener("mouseout", function() {
+    .addEventListener("dblclick", function() {
         document.getElementById("searchBox").innerHTML = "";
         document.getElementById("searchFeedback").innerHTML = "Result:";
         document.getElementById("buildingName").innerHTML = "<b>Courtyard Café</b>";

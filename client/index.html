@@ -35,10 +35,30 @@
 <!-- Feedback panel -->
 <p class='searchFeedback' id="searchFeedback">Search campus</p>
 
+<input id="change_value_campus" type="button" value="Home">
+    <script type="text/javascript">
+        function mapResetButton() {
+            map.setView([41.604182, -88.08067], 17.25);
+            document.getElementById("searchBox").innerHTML = "";
+            document.getElementById("searchFeedback").innerHTML = "Search campus";
+            document.getElementById("buildingName").innerHTML = "Search campus or click on a building to search within a building.";
+            document.getElementById("buildingMapCode").innerHTML = "";
+            document.getElementById("buildingHyperlink").innerHTML = "";
+            document.getElementById("buildingDescription").innerHTML = "";
+            document.getElementById("buildingCityState").innerHTML = "";
+            document.getElementById("buildingRooms").innerHTML = "";
+        }
+        document
+                .getElementById("change_value_campus")
+                .addEventListener("click", mapResetButton);
+    </script>
+
+
 <!-- Search Report area -->
 <h2>Directories</h2>
 
-<p id="buildingName">Campus Directory</p>
+
+<p id="buildingName">Search campus or click on a building to search within a building.</p>
 <p id="buildingMapCode"></p>
 <p id="buildingHyperlink"></p>
 <p id="buildingDescription"></p>
