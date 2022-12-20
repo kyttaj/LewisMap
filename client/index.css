@@ -64,7 +64,27 @@
 }
 
 .searchBox {
-    margin: 15px 0px 15px 0px;
+    margin: 25px 0px 15px 1px;
     display: block;
-    width: 100%;
+    width: 30%;
+    border: 1px solid #8d1919;
 }
+
+.button {
+    background-color: white; 
+    color: black;
+    margin: 0px 2px 13px 1px;
+    cursor: pointer;
+    border: 1px solid #8d1919;
+}
+
+.button:hover {
+    background-color: #8d1919;
+    color: white;
+  }
+
+  .dividerBar {
+    height: 2px;
+    color: #8d1919;
+    background-color: #8d1919;
+  }
