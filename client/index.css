@@ -55,7 +55,8 @@
 }
 
 .polygon {
-    color: blue;
+    stroke: #8d1919;
+    color: #8d1919;
 }
 
 .searchFeedback {

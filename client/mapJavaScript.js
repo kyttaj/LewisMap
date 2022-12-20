@@ -117,7 +117,7 @@ buildings.push(buildingFA18);
 let FA18 = [buildingFA18.JsonCoordinatesArray];
 
 // FA18 polygon properties and popup
-let polygon = L.polygon(FA18, { color: 'green', fillOpacity: .7, weight: 1, id: "polygon" }).addTo(vectorLayer);
+let polygon = L.polygon(FA18, { color: 'green', fillOpacity: .7, weight: 1, id: 'polygon' }).addTo(vectorLayer);
 polygon.bindPopup('<b>' + buildingFA18.getBuildingName() + '</b><br>Building: ' + buildingFA18.BuildingLewisMapCode);
 let popup = L.popup();
 
